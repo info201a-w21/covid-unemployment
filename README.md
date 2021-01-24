@@ -5,6 +5,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 We are interested in “Trending topics in 2020” because we want to discover what was popular during the whole year of quarantine, and allows us to see what headlines grabbed people’s attention. We want to use this data to potentially discover consumer preferences throughout 2020 or to predict upcoming trends in 2021. 
 
+====================
 
 
 **What other examples of data driven project have you found related to this domain (share at least 3)?**
