@@ -5,6 +5,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 
 **What other examples of data driven project have you found related to this domain (share at least 3)?**
+
 • Trending google searches on Google https://trends.google.com/trends/yis/2020/US/
 
 • Trends on Twitter for 2020, spans from emojis to videos to most popular posts https://blog.twitter.com/en_us/topics/insights/2020/spending-2020-together-on-twitter.html 
