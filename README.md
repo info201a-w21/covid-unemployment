@@ -11,7 +11,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 
 
-**DATA 1**
+# **DATA 1**
 
 Where did you download the data (e.g., a web URL)?
 
@@ -29,7 +29,7 @@ What questions (from above) can be answered using the data in this dataset?
 
 
 
-**DATA 2**
+# **DATA 2**
 
 Where did you download the data (e.g., a web URL)?
 
