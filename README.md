@@ -28,10 +28,10 @@ We are interested in “Trending topics in 2020” because we want to discover w
 
 
 
-# **DATA 1**
+# **DATA 1:** Google Search trends
 
 Where did you download the data (e.g., a web URL)?
-
+- We downloaded the data from kaggle
 
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
