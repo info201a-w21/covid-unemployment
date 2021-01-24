@@ -17,6 +17,11 @@ We are interested in “Trending topics in 2020” because we want to discover w
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
+1. What are the most common topics of each year covered by journalists?
+2. What headlines do people generally gravitate towards?
+3. How have topics changed throughout the year?
+4. What were the most common phrases used in headlines?
+
 
 
 # **DATA 1**
