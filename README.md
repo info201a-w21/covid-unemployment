@@ -30,40 +30,40 @@ We are interested in “Trending topics in 2020” because we want to discover w
 
 # **DATA 1:** Google Search trends
 
-Where did you download the data (e.g., a web URL)?
+**Where did you download the data (e.g., a web URL)?**
 - We downloaded the data from kaggle
 
-How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
 
-How many observations (rows) are in your data?
+**How many observations (rows) are in your data?**
 
 
-How many features (columns) are in the data?
+**How many features (columns) are in the data?**
 
 
-What questions (from above) can be answered using the data in this dataset?
+**What questions (from above) can be answered using the data in this dataset?**
 
 
 
 # **DATA 2**
 
-Where did you download the data (e.g., a web URL)?
+**Where did you download the data (e.g., a web URL)?**
 https://developer.nytimes.com/docs/top-stories-product/1/overview
 
-How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
 NY times collecting the top stories/articles on their website updated each day.
 
-How many observations (rows) are in your data?
+**How many observations (rows) are in your data?**
 
 26
 
-How many features (columns) are in the data?
+**How many features (columns) are in the data?**
 
 24
 
-What questions (from above) can be answered using the data in this dataset?
+**What questions (from above) can be answered using the data in this dataset?**
 
 1. What headlines do people generally gravitate towards?
 2. What are the most common topics covered in news today?
@@ -71,16 +71,16 @@ What questions (from above) can be answered using the data in this dataset?
 
 # **DATA 3**
 
-Where did you download the data (e.g., a web URL)?
+**Where did you download the data (e.g., a web URL)?**
 
 
-How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+**How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
 
-How many observations (rows) are in your data?
+**How many observations (rows) are in your data?**
 
 
-How many features (columns) are in the data?
+**How many features (columns) are in the data?**
 
 
-What questions (from above) can be answered using the data in this dataset?
+**What questions (from above) can be answered using the data in this dataset?**
