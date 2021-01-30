@@ -78,9 +78,11 @@ https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube
 The data collected and generated is about the YouTube trends in the US that is updated daily. The data is collected by Rishav Sharma through Kaggle. 
 
 **How many observations (rows) are in your data?**
+
 There are 33196 rows in this data 
 
 **How many features (columns) are in the data?**
+
 There are 16 columns in the data
 
 **What questions (from above) can be answered using the data in this dataset?**
