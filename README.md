@@ -69,7 +69,7 @@ NY times collecting the top stories/articles on their website updated each day.
 2. What are the most common topics covered in news today?
 
 
-# **DATA 3**
+# **DATA 3** YouTube trends search 
 
 **Where did you download the data (e.g., a web URL)?**
 https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
