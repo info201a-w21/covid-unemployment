@@ -72,15 +72,19 @@ NY times collecting the top stories/articles on their website updated each day.
 # **DATA 3**
 
 **Where did you download the data (e.g., a web URL)?**
-
+https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
-
+The data collected and generated is about the YouTube trends in the US that is updated daily. The data is collected by Rishav Sharma through Kaggle. 
 
 **How many observations (rows) are in your data?**
-
+There are 33196 rows in this data 
 
 **How many features (columns) are in the data?**
-
+There are 16 columns in the data
 
 **What questions (from above) can be answered using the data in this dataset?**
+
+1. Which trending video of the day in the US got the most dislikes?
+2. Which trending video of the day in the US got the most likes? 
+3. Is there a correlation between how many views a video gets and its trending rank in the US?
