@@ -75,6 +75,7 @@ NY times collecting the top stories/articles on their website updated each day.
 https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+
 The data collected and generated is about the YouTube trends in the US that is updated daily. The data is collected by Rishav Sharma through Kaggle. 
 
 **How many observations (rows) are in your data?**
