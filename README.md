@@ -37,6 +37,7 @@ We are interested in “Trending topics in 2020” because we want to discover w
 - URL: https://trends.google.com/trends/explore?q=%2Fg%2F11j2cc_qll,%2Fm%2F01cpyy,%2Fg%2F11b77d6b6f,%2Fm%2F0g9pc,%2Fg%2F11b77d3kyh 
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+
 Google tracking and updating the most popular topics searched on its platform
 
 **How many observations (rows) are in your data?**
