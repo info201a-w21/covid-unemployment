@@ -28,25 +28,27 @@ We are interested in “Trending topics in 2020” because we want to discover w
 
 
 
-# **DATA 1:** Google Search trends
+# **DATA 1:** Google Search Trends
 
 **Where did you download the data (e.g., a web URL)?**
-- We downloaded the data from kaggle
+- We downloaded the data from the google trend database
+-URL: https://trends.google.com/trends/explore?q=%2Fg%2F11j2cc_qll,%2Fm%2F01cpyy,%2Fg%2F11b77d6b6f,%2Fm%2F0g9pc,%2Fg%2F11b77d3kyh 
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
-
+Google tracking and updating the most popular topics searched on its platform
 
 **How many observations (rows) are in your data?**
-
+53
 
 **How many features (columns) are in the data?**
-
+21
 
 **What questions (from above) can be answered using the data in this dataset?**
+1. What headlines do people generally gravitate towards?
+2. How have topics changed throughout the year
 
 
-
-# **DATA 2**
+# **DATA 2:** New York Times Top Stories/Articles 
 
 **Where did you download the data (e.g., a web URL)?**
 https://developer.nytimes.com/docs/top-stories-product/1/overview
@@ -69,8 +71,7 @@ NY times collecting the top stories/articles on their website updated each day.
 2. What are the most common topics covered in news today?
 
 
-# **DATA 3** YouTube trends search 
-
+# **DATA 3:** YouTube Trends Search 
 **Where did you download the data (e.g., a web URL)?**
 https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
 
