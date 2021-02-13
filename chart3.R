@@ -8,7 +8,7 @@ library(tidyr)
 unemployed <-Unemployment_insurance
 
 # Filter Unemployment insurance data to only get Non-seasonal adjustment and seasonal adjustment data
-NSA_and_SA<-Unemployment_insurance%>% 
+NSA_and_SA <- unemployed %>% 
   select(
   X,
   X.1, 
@@ -18,7 +18,24 @@ NSA_and_SA<-Unemployment_insurance%>%
   X.11
   )
 
+# Rename columns in NSA_SA
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X"] <- "Date"
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X.1"] <- "initial_NSA"
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X.3"] <- "initial_SA"
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X.5 "] <- "continued_NSA"
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X.7 "] <- "continued_SA"
+
+names(NSA_and_SA)[names(NSA_and_SA) == "X.11 "] <- "covered_employment"
+
+
+
 View(NSA_and_SA)
 
 
-ggplot(NSA_and_SA)
+ggplot(NSA_and_SA)+
+  geom_bar(mapping = aes(x = date, y = X.1))
