@@ -2,32 +2,40 @@ library(lintr)
 library(ggplot2)
 library(tidyverse)
 library(styler)
+library(dplyr)
+library(tidyr)
 
 # Which month(s) have the highest death rates?
 
 race <- read_csv("C:/Users/lynnc/Downloads/CRDT Data - CRDT (1).csv")
 
-deaths<- race %>%
-  select(Deaths_Total,
-         Deaths_White, 
-         Deaths_Asian, 
-         Deaths_Latinx,
-         Deaths_Black, 
-         Deaths_Multiracial, 
-         Deaths_Other, 
-         Deaths_Ethnicity_Hispanic, 
-         Deaths_AIAN, 
-         Deaths_NHPI,
-         Deaths_Other, 
-         Deaths_Unknown)
+#deaths_data <- 
+  #select(race) %>%
+  #gather(key = State, value = Deaths_Total)
 
-states <- race%>%
-  pull(State)
+deaths_data<- race %>% 
+    select (State, 
+    Deaths_Total,
+    Deaths_White, 
+    Deaths_Asian, 
+    Deaths_Latinx,
+    Deaths_Black, 
+    Deaths_Multiracial, 
+    Deaths_Other, 
+    Deaths_Ethnicity_Hispanic, 
+    Deaths_AIAN, 
+    Deaths_NHPI,
+    Deaths_Other,
+    Deaths_Unknown)%>%
+    #gather(key = Deaths_Total, value = State, na.rm = FALSE)
+    gather(key = State, value = Deaths_Total)%>%
+    mutate(State = State)
 
-states_death <- merge(states, deaths)
-       
-       #(Deaths_White, Deaths_Black, Deaths_Latinx, Deaths_Asian)
 
-ggplot(states_death) + 
-  geom_bar(mapping = aes(x = race, y = deaths))
+View(deaths_data)
 
+ggplot(deaths) + 
+  geom_col(
+    mapping = aes(x = State, y = Deaths_Total),
+    fill = deaths
+    )
