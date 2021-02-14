@@ -21,21 +21,23 @@ NSA_and_SA <- unemployed %>%
 # Rename columns in NSA_SA
 
 names(NSA_and_SA)[names(NSA_and_SA) == "X"] <- "Date"
-
 names(NSA_and_SA)[names(NSA_and_SA) == "X.1"] <- "initial_NSA"
-
 names(NSA_and_SA)[names(NSA_and_SA) == "X.3"] <- "initial_SA"
-
-names(NSA_and_SA)[names(NSA_and_SA) == "X.5 "] <- "continued_NSA"
-
-names(NSA_and_SA)[names(NSA_and_SA) == "X.7 "] <- "continued_SA"
-
-names(NSA_and_SA)[names(NSA_and_SA) == "X.11 "] <- "covered_employment"
-
-
+names(NSA_and_SA)[names(NSA_and_SA) == "X.5"] <- "continued_NSA"
+names(NSA_and_SA)[names(NSA_and_SA) == "X.7"] <- "continued_SA"
+names(NSA_and_SA)[names(NSA_and_SA) == "X.11"] <- "covered_employment"
 
 View(NSA_and_SA)
+    
+
+# Graph comparing initial non-seasonal adjusted to continued non-seasonal adjusted 
+NSA_initial_to_continued <- ggplot(data = NSA_and_SA)+
+  geom_col(mapping = aes(x = initial_NSA, y = continued_NSA)) + 
+                          coord_flip()
+                        
 
 
-ggplot(NSA_and_SA)+
-  geom_bar(mapping = aes(x = date, y = X.1))
+
+
+
+
