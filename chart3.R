@@ -28,16 +28,31 @@ names(NSA_and_SA)[names(NSA_and_SA) == "X.7"] <- "continued_SA"
 names(NSA_and_SA)[names(NSA_and_SA) == "X.11"] <- "covered_employment"
 
 View(NSA_and_SA)
-    
 
-# Graph comparing initial non-seasonal adjusted to continued non-seasonal adjusted 
-NSA_initial_to_continued <- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = initial_NSA, y = continued_NSA)) + 
+# Extract population from the specific columns
+NSA_ipopulation <- NSA_and_SA[, "initial_NSA"]
+NSA_cpopulation <- NSA_and_SA[, "continued_NSA"]
+
+SA_ipopulation <- NSA_and_SA[, "initial_SA"]
+SA_cpopulation <- NSA_and_SA[, "continued_SA"]
+
+# Graph shows the date and how many initial non-seasonal adjustments were made on that day 
+NSA_initial<- ggplot(data = NSA_and_SA)+
+  geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) + 
                           coord_flip()
-                        
+# Graph shows the date and how many continued non-seasonal adjustments were made on that day
+NSA_continued<- ggplot(data = NSA_and_SA)+
+  geom_col(mapping = aes(x=Date, y=continued_NSA, fill = NSA_cpopulation)) +
+                          coord_flip()
 
+# Graph shows the date and how many initial seasonal adjustments were made on that day
+SA_initial <- ggplot(data = NSA_and_SA)+
+  geom_col(mapping = aes(x = Date, y = initial_SA, fill = SA_ipopulation)) + 
+  coord_flip()
 
-
-
+# Graph shows the date and how many continued seasonal adjustmets were made on that day
+SA_continued <- ggplot(data = NSA_and_SA)+
+  geom_col(mapping = aes(x = initial_SA, y = population, fill = SA_cpopulation)) + 
+  coord_flip()
 
 
