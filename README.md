@@ -30,7 +30,7 @@ pandemic.
 
 1. Which race/groups of people are most unemployed during the pandemic?
 2. When was unemployment at its highest during the pandemic?
-3. [ add more ]
+3. Which month(s) have the highest death rates?
 
 
 
