@@ -75,8 +75,9 @@ employment_rate_global %>%
   colnames(employment_rate_global) %>%
   colnames(employment_rate_global)[colnames(employment_rate_global) == "INDICATOR"] <- "employment_status"
   colnames(employment_rate_global)[colnames(employment_rate_global) == "SUBJECT"] <- "both_male_and_female_is_total"
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "FREQUENCY"] <- "month"
+  colnames(employment_rate_global)[colnames(employment_rate_global) == "FREQUENCY"] <- "monthly"
   colnames(employment_rate_global)[colnames(employment_rate_global) == "TIME"] <- "date"
   colnames(employment_rate_global)[colnames(employment_rate_global) == "VALUE"] <- "Percent_employed"
   
+  view(employment_rate_global)
 
