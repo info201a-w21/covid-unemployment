@@ -19,6 +19,9 @@ NSA_and_SA <- unemployed %>%
   X.11
   )
 
+#NSA_total <- NSA_and_SA%>%arrange(min(Date))%>%pull(Date) 
+
+
 # Rename columns in NSA_SA
 
 names(NSA_and_SA)[names(NSA_and_SA) == "X"] <- "Date"
@@ -37,9 +40,11 @@ NSA_cpopulation <- NSA_and_SA[, "continued_NSA"]
 SA_ipopulation <- NSA_and_SA[, "initial_SA"]
 SA_cpopulation <- NSA_and_SA[, "continued_SA"]
 
+NSA_and_SA[order(as.Date(NSA_and_SA$Date, format = "%Y/%m/%d")),]
+
 # Graph shows the date and how many initial non-seasonal adjustments were made on that day 
 NSA_initial<- ggplot(NSA_and_SA)+
-    geom_col(mapping = aes(x = reorder(Date, Date, max), y = initial_NSA, fill = NSA_ipopulation)) +
+    geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) +
           theme(legend.position = "right")+
           coord_flip()
           
