@@ -26,10 +26,7 @@ covid_unemployment %>%
 # Number of loss or gain jobs by race
 job_gains_or_loss_by_race <- covid_unemployment %>%
   group_by(Race) %>%
-  summarize(Black = African-American, #why is this one an error? ask TA
-            "Hispanic/Latino" = Hispanic,
-            White = White,
-            Other = Other)
+  summarize(total_change = sum(Number))
   
 
 
@@ -68,16 +65,4 @@ rate_increase_in_cases_by_race <- covid_by_race %>%
 
 
 
-# Employment rate global --------
-
-# rename some columns
-employment_rate_global %>%
-  colnames(employment_rate_global) %>%
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "INDICATOR"] <- "employment_status"
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "SUBJECT"] <- "both_male_and_female_is_total"
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "FREQUENCY"] <- "monthly"
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "TIME"] <- "date"
-  colnames(employment_rate_global)[colnames(employment_rate_global) == "VALUE"] <- "Percent_employed"
-  
-  view(employment_rate_global)
 
