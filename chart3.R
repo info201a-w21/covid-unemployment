@@ -8,6 +8,7 @@ library(tidyr)
 unemployed <-Unemployment_insurance
 
 # Filter Unemployment insurance data to only get Non-seasonal adjustment and seasonal adjustment data
+  
 NSA_and_SA <- unemployed %>% 
   select(
   X,
@@ -36,14 +37,12 @@ NSA_cpopulation <- NSA_and_SA[, "continued_NSA"]
 SA_ipopulation <- NSA_and_SA[, "initial_SA"]
 SA_cpopulation <- NSA_and_SA[, "continued_SA"]
 
-  mutate(data = NSA_and_SA(NSA_total = initial_NSA + continued_NSA))
-
 # Graph shows the date and how many initial non-seasonal adjustments were made on that day 
 NSA_initial<- ggplot(NSA_and_SA)+
-    geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) +
+    geom_col(mapping = aes(x = reorder(Date, Date, max), y = initial_NSA, fill = NSA_ipopulation)) +
           theme(legend.position = "right")+
           coord_flip()
-
+          
 # Graph shows the date and how many continued non-seasonal adjustments were made on that day
 NSA_continued<- ggplot(data = NSA_and_SA)+
   geom_col(mapping = aes(x=Date, y=continued_NSA, fill = NSA_cpopulation)) +
@@ -58,9 +57,10 @@ SA_initial <- ggplot(data = NSA_and_SA)+
 
 # Graph shows the date and how many continued seasonal adjustmets were made on that day
 SA_continued <- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = initial_SA, y = population, fill = SA_cpopulation)) + 
-    theme(legened.postion = "right")
-    coord_flip()
+  geom_col(mapping = aes(x = Date, y = continued_SA, fill = SA_cpopulation)) + 
+          theme(legend.position = "right")+
+          coord_flip()
+    
 
 
 
