@@ -17,6 +17,11 @@ NSA_and_SA <- unemployed %>%
   X.7, 
   X.11
   )
+both_NSA <- NSA_and_SA %>%
+  select(
+    initial_NSA, 
+    continued_NSA
+     )
 
 # Rename columns in NSA_SA
 
@@ -36,23 +41,30 @@ NSA_cpopulation <- NSA_and_SA[, "continued_NSA"]
 SA_ipopulation <- NSA_and_SA[, "initial_SA"]
 SA_cpopulation <- NSA_and_SA[, "continued_SA"]
 
+  mutate(data = NSA_and_SA(NSA_total = initial_NSA + continued_NSA))
+
 # Graph shows the date and how many initial non-seasonal adjustments were made on that day 
-NSA_initial<- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) + 
-                          coord_flip()
+NSA_initial<- ggplot(NSA_and_SA)+
+    geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) +
+          theme(legend.position = "right")+
+          coord_flip()
+
 # Graph shows the date and how many continued non-seasonal adjustments were made on that day
 NSA_continued<- ggplot(data = NSA_and_SA)+
   geom_col(mapping = aes(x=Date, y=continued_NSA, fill = NSA_cpopulation)) +
-                          coord_flip()
+          theme(legend.position = "right")+
+          coord_flip()
 
 # Graph shows the date and how many initial seasonal adjustments were made on that day
 SA_initial <- ggplot(data = NSA_and_SA)+
   geom_col(mapping = aes(x = Date, y = initial_SA, fill = SA_ipopulation)) + 
-  coord_flip()
+          theme(legend.position = "right")+
+          coord_flip()
 
 # Graph shows the date and how many continued seasonal adjustmets were made on that day
 SA_continued <- ggplot(data = NSA_and_SA)+
   geom_col(mapping = aes(x = initial_SA, y = population, fill = SA_cpopulation)) + 
-  coord_flip()
+    theme(legened.postion = "right")
+    coord_flip()
 
 
