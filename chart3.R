@@ -17,11 +17,6 @@ NSA_and_SA <- unemployed %>%
   X.7, 
   X.11
   )
-both_NSA <- NSA_and_SA %>%
-  select(
-    initial_NSA, 
-    continued_NSA
-     )
 
 # Rename columns in NSA_SA
 
@@ -68,3 +63,5 @@ SA_continued <- ggplot(data = NSA_and_SA)+
     coord_flip()
 
 
+
+    
