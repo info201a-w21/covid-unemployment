@@ -19,9 +19,6 @@ NSA_and_SA <- unemployed %>%
   X.11
   )
 
-#NSA_total <- NSA_and_SA%>%arrange(min(Date))%>%pull(Date) 
-
-
 # Rename columns in NSA_SA
 
 names(NSA_and_SA)[names(NSA_and_SA) == "X"] <- "Date"
