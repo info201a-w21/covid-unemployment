@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "index"
+=======
+title: "Covid unemployment project"
+>>>>>>> 75879af653ab47e8145520362ccff7c0047d2170
 output: html_document
 ---
 
