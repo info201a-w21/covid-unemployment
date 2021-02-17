@@ -1,58 +1,35 @@
 library(lintr)
-library(ggplot2)
 library(tidyverse)
 library(styler)
 library(dplyr)
 library(tidyr)
+library(readr)
 
-unemployed <-Unemployment_insurance
+employment<- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/OECD_Data_EA-19_and_G-7.csv")
 
-# Filter Unemployment insurance data to only get Non-seasonal adjustment and seasonal adjustment data
-NSA_and_SA <- unemployed %>% 
-  select(
-  X,
-  X.1, 
-  X.3, 
-  X.5, 
-  X.7, 
-  X.11
-  )
+View(employment)
 
-# Rename columns in NSA_SA
+# Rename locations column in unemployment data frame 
 
-names(NSA_and_SA)[names(NSA_and_SA) == "X"] <- "Date"
-names(NSA_and_SA)[names(NSA_and_SA) == "X.1"] <- "initial_NSA"
-names(NSA_and_SA)[names(NSA_and_SA) == "X.3"] <- "initial_SA"
-names(NSA_and_SA)[names(NSA_and_SA) == "X.5"] <- "continued_NSA"
-names(NSA_and_SA)[names(NSA_and_SA) == "X.7"] <- "continued_SA"
-names(NSA_and_SA)[names(NSA_and_SA) == "X.11"] <- "covered_employment"
+names(employment)[names(employment) == "X...LOCATION"] <- "Location"
 
-View(NSA_and_SA)
+# Filter dataset by location, time, and value 
 
-# Extract population from the specific columns
-NSA_ipopulation <- NSA_and_SA[, "initial_NSA"]
-NSA_cpopulation <- NSA_and_SA[, "continued_NSA"]
+new_employment<- employment %>%
+    select(Location, TIME, Value) %>%
+    arrange(desc(TIME)) # Orders data from least recent to most recent 
 
-SA_ipopulation <- NSA_and_SA[, "initial_SA"]
-SA_cpopulation <- NSA_and_SA[, "continued_SA"]
+# Lollipop graph that shows how much fluctuation each country goes through from 2019-2021
 
-# Graph shows the date and how many initial non-seasonal adjustments were made on that day 
-NSA_initial<- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = Date, y = initial_NSA, fill = NSA_ipopulation)) + 
-                          coord_flip()
-# Graph shows the date and how many continued non-seasonal adjustments were made on that day
-NSA_continued<- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x=Date, y=continued_NSA, fill = NSA_cpopulation)) +
-                          coord_flip()
-
-# Graph shows the date and how many initial seasonal adjustments were made on that day
-SA_initial <- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = Date, y = initial_SA, fill = SA_ipopulation)) + 
-  coord_flip()
-
-# Graph shows the date and how many continued seasonal adjustmets were made on that day
-SA_continued <- ggplot(data = NSA_and_SA)+
-  geom_col(mapping = aes(x = initial_SA, y = population, fill = SA_cpopulation)) + 
-  coord_flip()
-
-
+library(ggplot2)
+theme_set(theme_bw())
+ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
+  geom_point(stat = 'identity', fill = "black", size = 5) +
+  geom_segment(aes(y=0, 
+                   x = '0', 
+                   yend = 0,
+                   xend = '0'),
+               color = "black")+
+  geom_text(color = "white", size = 2)+
+labs(title = "EA-19 and G-7 Employment Rate Nov 2019 to Jan 2021 ") +
+  ylim(45.0, 80.0) 
