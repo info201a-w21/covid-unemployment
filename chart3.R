@@ -1,5 +1,4 @@
 library(lintr)
-library(ggplot2)
 library(tidyverse)
 library(styler)
 library(dplyr)
@@ -20,7 +19,8 @@ new_employment<- employment %>%
     select(Location, TIME, Value) %>%
     arrange(desc(TIME)) # Orders data from least recent to most recent 
 
-# Lollipop graph that shows how much fluctuation each country goes through from 2019-2021, 
+# Lollipop graph that shows how much fluctuation each country goes through from 2019-2021
+
 library(ggplot2)
 theme_set(theme_bw())
 ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
