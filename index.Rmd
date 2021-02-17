@@ -4,8 +4,11 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 library(knitr)
+library(tidyverse)
+source("chart1.R")
+source("chart2.R")
 ```
 
 ## Introduction
@@ -24,7 +27,7 @@ information function
 
 ## Table 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 kable(job_gains_or_loss_by_race)
 ```
 
@@ -38,7 +41,7 @@ We found that each of the four experienced loss of job during the
 pandemic, with the highest total change .... [editing]
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 kable(cumulative_cases_by_race)
 ```
 
@@ -52,7 +55,7 @@ positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 kable(rate_increase_in_cases_by_race)
 ```
 
@@ -67,15 +70,20 @@ increase of new covid cases over time during the pandemic.
 
 
 ## Chart 1
-Describe the purpose of each chart (e.g., "this chart was intended to show the 
-relationship between..."), render each chart, and describe pertinent 
-observations found in each chart
+
+```{r, echo=FALSE}
+unemployment_by_race
+```
+
+This chart was intended to show the relationship between race and percentage unemployed. Based on the observed data, unemployment percentages are relatively similar between races, however, white unemployment rate appear higher than African-American, Hispanic, and other races.
 
 
 ## Chart 2
-Describe the purpose of each chart (e.g., "this chart was intended to show the 
-relationship between..."), render each chart, and describe pertinent 
-observations found in each chart
+```{r, echo=FALSE}
+employment_by_month
+```
+
+This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season. 
 
 
 ## Chart 3

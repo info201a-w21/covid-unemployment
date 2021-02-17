@@ -3,8 +3,8 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("https://raw.githubusercontent.com/info201a-w21/projec
-                         t-JonathanQTrinh/main/Georgetown-by-race.csv")
+unemployment <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-
+                         unemployment/main/Georgetown-by-race.csv")
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
