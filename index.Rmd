@@ -9,6 +9,7 @@ library(knitr)
 library(tidyverse)
 source("chart1.R")
 source("chart2.R")
+source("chart3.R")
 ```
 
 ## Introduction
@@ -87,7 +88,11 @@ This chart was intended to show the trends of employed individuals across a year
 
 
 ## Chart 3
-Describe the purpose of each chart (e.g., "this chart was intended to show the 
-relationship between..."), render each chart, and describe pertinent 
-observations found in each chart
+```{r, echo=FALSE}
+employment_range
+```
+
+
+This chart was intended to show the fluctuation of employment on EA-17 and G-7 between November 2019 and January 2021. The observed data shows that, compared to the US other countries such as Japan and Korea did not fluctuate in terms of employment in the given time period, whereas countries such as Canada, Chile, and Columbia went through more fluctuations of employment in the given time period. 
+
 
