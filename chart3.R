@@ -23,7 +23,7 @@ new_employment<- employment %>%
 
 library(ggplot2)
 theme_set(theme_bw())
-ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
+employment_range <- ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
   geom_point(stat = 'identity', fill = "black", size = 5) +
   geom_segment(aes(y=0, 
                    x = '0', 
