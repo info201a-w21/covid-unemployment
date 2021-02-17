@@ -11,11 +11,10 @@ library(tidyverse)
 source("chart1.R")
 source("chart2.R")
 source("chart3.R")
+source("intro_summary")
 ```
 
 ## Introduction
-
-
 We are interested in “Unemployment during the Covid pandemic” because we want 
 to find out how it the pandemic has contributed to unemployment and if there 
 are certain groups of people who are more unemployed than others during the 
@@ -23,9 +22,18 @@ pandemic.
 
 
 ## Summary 
-Write a summary paragraph that includes information calculated by your summary 
-information function [ JONATHAN ]
-
+The world has been greatly impacted by the Coronavirus. The US experienced the
+most cases and deaths in the entire world. The state with the most deaths is 
+`r state_with_the_most_deaths`. Coincidentally, the state that experienced the 
+most Black deaths is also `r state_with_the_most_black_deaths`. In the US, minority 
+communities experienced highest rates of death. On a daily average, the minority 
+community experiences `r minority_average_death_count` deaths. The black community 
+have especially been impacted by the pandemic. Their community experiences a average daily 
+death count of `r african_average_death_count`. Minority groups make up
+`r percentage_of_minority_deaths`% of deaths in the US, with the black community making up
+`r percentage_of_black_deaths`% of the minority death population. In general, minority groups
+have been the most vulnerable during the pandemic, being more exposed to the virus and experience 
+deaths at higher rates than white communities.
 
 ## Table 
 
