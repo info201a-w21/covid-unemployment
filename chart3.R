@@ -32,4 +32,4 @@ ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
                color = "black")+
   geom_text(color = "white", size = 2)+
 labs(title = "EA-19 and G-7 Employment Rate Nov 2019 to Jan 2021 ") +
-  ylim(0, 100.0) 
+  ylim(45.0, 80.0) 
