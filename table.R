@@ -26,8 +26,18 @@ covid_unemployment %>%
 # Number of loss or gain jobs by race
 job_gains_or_loss_by_race <- covid_unemployment %>%
   group_by(Race) %>%
-  summarize(total_change = sum(Number))
+  summarize(total_change = sum(Number)) # Biggest impact on White community
   
+# White with covid out of total white pop
+white_covid_ratio <- 33,146,501 / 234,370,202 # 14% of white pop lost jobs
+
+# African-Americans with covid out of total Africa-American pop
+Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
+
+# Hispanics with covid out of total Hispanics pop
+Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20 of hispanic pop lost jobs
+
+
 
 
 # Covid by race --------
@@ -63,6 +73,7 @@ rate_increase_in_cases_by_race <- covid_by_race %>%
             Unknown = ((as.numeric(Cases_Unknown) - as.numeric(lag(Cases_Unknown))) / as.numeric(lag(Cases_Unknown))) * 100) %>%
   mutate_if(is.numeric, round, digits = 1) 
 
+view(rate_increase_in_cases_by_race)
 
 
 
