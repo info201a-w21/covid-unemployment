@@ -26,6 +26,7 @@ summary_info$state_with_the_most_black_deaths <- covid_data %>%
   pull(State)
 
 summary_info$state_with_the_most_black_deaths <- abbr2state(summary_info$state_with_the_most_black_deaths)
+
 #--------------------------------------------------------------------------------------------------  
 # determine the average daily death count of minorities
 summary_info$minority_average_death_count <- covid_data %>%
@@ -42,8 +43,6 @@ summary_info$minority_average_death_count <- covid_data %>%
   select(average_deaths) %>% 
   summarize(mean_of_deaths = mean(average_deaths, na.rm = T)) %>% 
   pull()
-
-
 
 #--------------------------------------------------------------------------------------------------  
 # determine the average daily death count of african american
