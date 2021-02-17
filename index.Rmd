@@ -24,7 +24,9 @@ information function
 
 ## Table 
 
+```{r setup, include=FALSE}
 kable(job_gains_or_loss_by_race)
+```
 
 For the Covid Unemployment data, we renamed some columns for better
 readibility and calculated the summary of the total change in the number of
@@ -36,7 +38,9 @@ We found that each of the four experienced loss of job during the
 pandemic, with the highest total change .... [editing]
 
 
+```{r setup, include=FALSE}
 kable(cumulative_cases_by_race)
+```
 
 For the Covid By Race data, decided to calculate the total cases of covid
 by each racial group to further determine which racial groups have been 
@@ -47,7 +51,11 @@ WA state, Hispanics, Blacks, and Unknown races consistently tested more
 positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
+
+```{r setup, include=FALSE}
 kable(rate_increase_in_cases_by_race)
+```
+
 
 For the Covid By Race data, decided to calculate the rate of increase of new 
 covid cases by each racial group to further determine which racial groups 
