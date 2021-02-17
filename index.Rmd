@@ -5,8 +5,73 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
 ```
 
 ## Introduction
 
+
+We are interested in “Unemployment during the Covid pandemic” because we want 
+to find out how it the pandemic has contributed to unemployment and if there 
+are certain groups of people who are more unemployed than others during the 
+pandemic.
+
+
+## Summary 
+Write a summary paragraph that includes information calculated by your summary 
+information function
+
+
+## Table 
+
+kable(job_gains_or_loss_by_race)
+
+For the Covid Unemployment data, we renamed some columns for better
+readibility and calculated the summary of the total change in the number of
+job gains or loss by each four race, that being African-American, Hispanic, 
+Other, and White. We thought that this might give us an insight as to
+which racial communities are most impacted and have lost the most jobs due to
+the the pandemic.
+We found that each of the four experienced loss of job during the 
+pandemic, with the highest total change .... [editing]
+
+
+kable(cumulative_cases_by_race)
+
+For the Covid By Race data, decided to calculate the total cases of covid
+by each racial group to further determine which racial groups have been 
+most impacted by covid. Based on the table, multiracial groups, 
+Native Americans/Alaska Natives, and Native Hawaiian/Pacific Islanders
+consistently tested the least positive for covid-19. After May 31, 2020 in 
+WA state, Hispanics, Blacks, and Unknown races consistently tested more 
+positive than Whites until October 14, where Whites and Unknown races
+test more positive than Hispanics and Blacks.
+
+kable(rate_increase_in_cases_by_race)
+
+For the Covid By Race data, decided to calculate the rate of increase of new 
+covid cases by each racial group to further determine which racial groups 
+have been most impacted by covid. We found that on May 3, the rate
+of increase in new covid cases was 480.3 among Native Hawaiian/Pacific
+Islanders. In addition, frican Americans also have the greatest rate of 
+increase of new covid cases over time during the pandemic.
+
+
+
+## Chart 1
+Describe the purpose of each chart (e.g., "this chart was intended to show the 
+relationship between..."), render each chart, and describe pertinent 
+observations found in each chart
+
+
+## Chart 2
+Describe the purpose of each chart (e.g., "this chart was intended to show the 
+relationship between..."), render each chart, and describe pertinent 
+observations found in each chart
+
+
+## Chart 3
+Describe the purpose of each chart (e.g., "this chart was intended to show the 
+relationship between..."), render each chart, and describe pertinent 
+observations found in each chart
 
