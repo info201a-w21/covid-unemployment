@@ -1,5 +1,6 @@
 ---
 title: "Covid Unemployment Project"
+author: Lynn Chou, Tammy Hu, Anna Shi, Jonathan Que Trinh
 output: html_document
 ---
 
@@ -19,7 +20,7 @@ pandemic.
 
 ## Summary 
 Write a summary paragraph that includes information calculated by your summary 
-information function
+information function [ JONATHAN ]
 
 
 ## Table 
@@ -35,7 +36,9 @@ Other, and White. We thought that this might give us an insight as to
 which racial communities are most impacted and have lost the most jobs due to
 the the pandemic.
 We found that each of the four experienced loss of job during the 
-pandemic, with the highest total change .... [editing]
+pandemic, with the race with the highest impact is White, but proportionally
+to their populations, Hispanic and African-Americans are more impacted by the
+loss of unemployment during the pandemic.
 
 
 ```{r setup, include=FALSE}
