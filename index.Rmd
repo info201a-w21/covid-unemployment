@@ -6,8 +6,8 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
-source("chart1")
-source("chart2")
+source("chart1.R")
+source("chart2.R")
 ```
 
 ## Introduction
