@@ -3,7 +3,7 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("Georgetown-by-race.csv") #[LC, prof mikes suggestion!]
+unemployment <- read.csv("Georgetown-by-race1.csv") #[LC, prof mikes suggestion!]
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
@@ -13,7 +13,7 @@ total_sample_size <- sum(unemployment$Sample.Size)
 # modified table for graphing employment by month
 new_table <- unemployment %>%
   group_by(Month.of.Month.of.Period) %>%
-  filter(X...Labor.Force.Status. == "Employed - at work") %>% #[LC]
+  filter(Labor.Force.Status. == "Employed - at work") %>% #[LC]
   summarize(num_employed = sum(Sample.Size)) %>%
   arrange(match(Month.of.Month.of.Period, month.name))
 
