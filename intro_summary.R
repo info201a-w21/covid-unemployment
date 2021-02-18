@@ -2,7 +2,7 @@ library(stringr)
 library(tidyverse)
 install.packages("openintro")
 library(openintro)
-covid_data <- read.csv("./covid_race.csv", row.names = NULL)
+covid_data <- read.csv("covid_race.csv", row.names = NULL)
 
 covid_data <- covid_data %>% 
   mutate(Date = as.Date(as.character(Date), format = "%Y%m%d"))
