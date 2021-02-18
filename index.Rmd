@@ -6,6 +6,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(knitr)
+chooseCRANmirror(graphics=FALSE, ind=1)
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 library(tidyverse)
 source("chart1.R")
