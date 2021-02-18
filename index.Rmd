@@ -15,95 +15,94 @@ source("intro_summary.R")
 ```
 
 ## Introduction
-We are interested in “Unemployment during the Covid pandemic” because we want 
-to find out how it the pandemic has contributed to unemployment and if there 
-are certain groups of people who are more unemployed than others during the 
+We are interested in “Unemployment during the Covid pandemic” because we want
+to find out how it the pandemic has contributed to unemployment and if there
+are certain groups of people who are more unemployed than others during the
 pandemic.
 
 
-## Summary 
+## Summary
 The world has been greatly impacted by the Coronavirus. The US experienced the
-most cases and deaths in the entire world. The state with the most deaths is 
-`r state_with_the_most_deaths`. Coincidentally, the state that experienced the 
-most Black deaths is also `r state_with_the_most_black_deaths`. In the US, minority 
-communities experienced highest rates of death. On a daily average, the minority 
-community experiences `r minority_average_death_count` deaths. The Black community 
-have especially been impacted by the pandemic. Their community experiences a average daily 
+most cases and deaths in the entire world. The state with the most deaths is
+`r state_with_the_most_deaths`. Coincidentally, the state that experienced the
+most Black deaths is also `r state_with_the_most_black_deaths`. In the US, minority
+communities experienced highest rates of death. On a daily average, the minority
+community experiences `r minority_average_death_count` deaths. The Black community
+have especially been impacted by the pandemic. Their community experiences a average daily
 death count of `r african_average_death_count`. Minority groups make up
 `r percentage_of_minority_deaths`% of deaths in the US, with the Black community making up
 `r percentage_of_black_deaths`% of the minority death population. In general, minority groups
-have been the most vulnerable during the pandemic, being more exposed to the virus and experience 
+have been the most vulnerable during the pandemic, being more exposed to the virus and experience
 deaths at higher rates than white communities.
 
-## Table 
+## Table
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
 kable(job_gains_or_loss_by_race)
 ```
 
 For the Covid Unemployment data, we renamed some columns for better
 readibility and calculated the summary of the total change in the number of
-job gains or loss by each four race, that being African-American, Hispanic, 
+job gains or loss by each four race, that being African-American, Hispanic,
 Other, and White. We thought that this might give us an insight as to
 which racial communities are most impacted and have lost the most jobs due to
 the the pandemic.
-We found that each of the four experienced loss of job during the 
+We found that each of the four experienced loss of job during the
 pandemic, with the race with the highest impact is White, but proportionally
 to their populations, Hispanic and African-Americans are more impacted by the
 loss of unemployment during the pandemic.
 
+# White with covid out of total white pop
+white_covid_ratio <- 33,146,501 / 234,370,202 # 14% of white pop lost jobs
 
-```{r, include=FALSE}
+# African-Americans with covid out of total Africa-American pop
+Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
+
+# Hispanics with covid out of total Hispanics pop
+Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20 of hispanic pop lost job
+
+
+```{r setup, include=FALSE}
 kable(cumulative_cases_by_race)
 ```
 
 For the Covid By Race data, decided to calculate the total cases of covid
-by each racial group to further determine which racial groups have been 
-most impacted by covid. Based on the table, multiracial groups, 
+by each racial group to further determine which racial groups have been
+most impacted by covid. Based on the table, multiracial groups,
 Native Americans/Alaska Natives, and Native Hawaiian/Pacific Islanders
-consistently tested the least positive for covid-19. After May 31, 2020 in 
-WA state, Hispanics, Blacks, and Unknown races consistently tested more 
+consistently tested the least positive for covid-19. After May 31, 2020 in
+WA state, Hispanics, Blacks, and Unknown races consistently tested more
 positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
 kable(rate_increase_in_cases_by_race)
 ```
 
 
-For the Covid By Race data, decided to calculate the rate of increase of new 
-covid cases by each racial group to further determine which racial groups 
+For the Covid By Race data, decided to calculate the rate of increase of new
+covid cases by each racial group to further determine which racial groups
 have been most impacted by covid. We found that on May 3, the rate
 of increase in new covid cases was 480.3 among Native Hawaiian/Pacific
-Islanders. In addition, frican Americans also have the greatest rate of 
+Islanders. In addition, African Americans also have the greatest rate of 
 increase of new covid cases over time during the pandemic.
 
 
 
 ## Chart 1
-
-```{r, echo=FALSE}
-unemployment_by_race
-```
-
-This chart was intended to show the relationship between race and percentage unemployed. Based on the observed data, unemployment percentages are relatively similar between races, however, white unemployment rate appear higher than African-American, Hispanic, and other races.
+Describe the purpose of each chart (e.g., "this chart was intended to show the
+relationship between..."), render each chart, and describe pertinent
+observations found in each chart
 
 
 ## Chart 2
-```{r, echo=FALSE}
-employment_by_month
-```
-
-This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season. 
+Describe the purpose of each chart (e.g., "this chart was intended to show the
+relationship between..."), render each chart, and describe pertinent
+observations found in each chart
 
 
 ## Chart 3
-```{r, echo=FALSE}
-employment_range
-```
-
-
-This chart was intended to show the fluctuation of employment on EA-17 and G-7 between November 2019 and January 2021. The observed data shows that, compared to the US other countries such as Japan and Korea did not fluctuate in terms of employment in the given time period, whereas countries such as Canada, Chile, and Columbia went through more fluctuations of employment in the given time period. 
-
-
+Describe the purpose of each chart (e.g., "this chart was intended to show the
+relationship between..."), render each chart, and describe pertinent
+observations found in each chart
