@@ -17,7 +17,7 @@ summary_info$state_with_the_most_deaths <- covid_data %>%
   filter(Deaths_Total == max(Deaths_Total, na.rm = T)) %>% 
   pull((State)) 
   
-summary_info[$state_with_the_most_deaths] <- abbr2state(summary_info$state_with_the_most_deaths)
+summary_info[state_with_the_most_deaths] <- abbr2state(summary_info$state_with_the_most_deaths)
 #--------------------------------------------------------------------------------------------------
 #which state has the most black deaths
 summary_info$state_with_the_most_black_deaths <- covid_data %>% 
