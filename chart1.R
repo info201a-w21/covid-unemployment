@@ -3,7 +3,9 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("Georgetown-by-race.csv") #[LC, prof mikes suggestion!]
+unemployment <- read.csv("Georgetown-by-race1.csv") #[LC, prof mikes suggestion!]
+
+# Experimenting!
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
@@ -12,7 +14,7 @@ total_sample_size <- sum(unemployment$Sample.Size)
 
 # modified table for graphing
 mod_table <- unemployment %>%
-  filter(X...Labor.Force.Status. == "Unemployed") %>% #[LC]
+  filter(Labor.Force.Status. == "Unemployed") %>% #[LC]
   group_by(Race) %>%
   summarize(num_unemployed = sum(Sample.Size, na.rm = T) / 
               total_sample_size * 100)
