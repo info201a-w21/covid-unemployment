@@ -90,7 +90,7 @@ For the Covid By Race data, decided to calculate the rate of increase of new
 covid cases by each racial group to further determine which racial groups
 have been most impacted by covid. We found that on May 3, the rate
 of increase in new covid cases was 480.3 among Native Hawaiian/Pacific
-Islanders. In addition, African Americans also have the greatest rate of 
+Islanders. In addition, African Americans also have the greatest rate of
 increase of new covid cases over time during the pandemic.
 
 
@@ -106,10 +106,10 @@ This chart was intended to show the relationship between race and percentage une
 ```{r echo = F}
 employment_by_month
 ```
-This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season. 
+This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season.
 
 ## Chart 3
 ```{r, echo = F}
 employment_range
 ```
-Ths chart was intended to show the relationship between fluctuation of employment between EA-19 and G-7 between Nov 2019 to January 2021. The observed data shows that while countries like Japan (JPN), Korea (KOR), and Russia (RUS) did not go through much fluctuations of employment in the given timer period, countries such as Canada (CAN), Chile (CHL), Columbia (COL), and USA went through mroe employment rate fluctuations. 
+Ths chart was intended to show the relationship between fluctuation of employment between EA-19 and G-7 between Nov 2019 to January 2021. The observed data shows that while countries like Japan (JPN), Korea (KOR), and Russia (RUS) did not go through much fluctuations of employment in the given timer period, countries such as Canada (CAN), Chile (CHL), Columbia (COL), and USA went through mroe employment rate fluctuations.
