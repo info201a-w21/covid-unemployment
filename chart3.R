@@ -5,8 +5,7 @@ library(dplyr)
 library(tidyr)
 library(readr)
 
-employment<- read.csv("OECD_Data_EA-19_and_G-7.csv")
-
+employment<- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/OECD_Data_EA-19_and_G-7.csv")
 View(employment)
 
 # Filter dataset by location, time, and value 
