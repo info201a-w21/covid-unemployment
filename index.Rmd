@@ -44,7 +44,6 @@ deaths at higher rates than white communities.
 ## Table
 
 ```{r echo = F}
-library(knitr)
 kable(job_gains_or_loss_by_race)
 ```
 
