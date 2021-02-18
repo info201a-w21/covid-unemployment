@@ -64,7 +64,7 @@ white_covid_ratio <- 33,146,501 / 234,370,202 # 14% of white pop lost jobs
 Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
 
 # Hispanics with covid out of total Hispanics pop
-Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20% of hispanic pop lost job
+Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20% of hispanic pop lost jobs
 
 
 ```{r echo = F}
