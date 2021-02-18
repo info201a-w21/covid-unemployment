@@ -109,6 +109,7 @@ employment_by_month
 This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season. 
 
 ## Chart 3
-Describe the purpose of each chart (e.g., "this chart was intended to show the
-relationship between..."), render each chart, and describe pertinent
-observations found in each chart
+```{r, echo = F}
+employment_range
+```
+Ths chart was intended to show the relationship between fluctuation of employment between EA-19 and G-7 between Nov 2019 to January 2021. The observed data shows that while countries like Japan (JPN), Korea (KOR), and Russia (RUS) did not go through much fluctuations of employment in the given timer period, countries such as Canada (CAN), Chile (CHL), Columbia (COL), and USA went through mroe employment rate fluctuations. 
