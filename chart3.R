@@ -11,7 +11,7 @@ View(employment)
 
 # Rename locations column in unemployment data frame 
 
-names(employment)[names(employment) == "X...LOCATION"] <- "Location"
+names(employment)[names(employment) == "ï..LOCATION"] <- "Location"
 
 # Filter dataset by location, time, and value 
 
