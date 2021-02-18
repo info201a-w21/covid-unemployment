@@ -7,13 +7,13 @@ unemployment <- read.csv("Georgetown-by-race.csv") #[LC, prof mikes suggestion!]
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
-# change column name from ï..Labor.Force.Status to Labor.Force.Status [LC]
-names(unemployment)[names(unemployment) == "ï..Labor.Force.Status"] <- "Labor.Force.Status" 
+# change column name from o..Labor.Force.Status to Labor.Force.Status [LC]
+# names(unemployment)[names(unemployment) == "o..Labor.Force.Status"] <- "Labor.Force.Status" 
 
 # modified table for graphing employment by month
 new_table <- unemployment %>%
   group_by(Month.of.Month.of.Period) %>%
-  filter(Labor.Force.Status == "Employed - at work") %>% #[LC]
+  filter(X...Labor.Force.Status. == "Employed - at work") %>% #[LC]
   summarize(num_employed = sum(Sample.Size)) %>%
   arrange(match(Month.of.Month.of.Period, month.name))
 
