@@ -3,7 +3,7 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("Georgetown-by-race.csv")
+unemployment <- read.csv("Georgetown-by-race.csv") #[LC, prof mikes suggestion!]
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
