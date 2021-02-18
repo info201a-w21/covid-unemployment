@@ -3,15 +3,16 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-
-                         unemployment/main/Georgetown-by-race.csv")
+unemployment <- read.csv("Georgetown-by-race.csv")
 
 total_sample_size <- sum(unemployment$Sample.Size)
 
+# change column name from ï..Labor.Force.Status to Labor.Force.Status [LC]
+names(unemployment)[names(unemployment) == "ï..Labor.Force.Status"] <- "Labor.Force.Status" 
 
 # modified table for graphing
 mod_table <- unemployment %>%
-  filter(ï..Labor.Force.Status == "Unemployed") %>%
+  filter(Labor.Force.Status == "Unemployed") %>% #[LC]
   group_by(Race) %>%
   summarize(num_unemployed = sum(Sample.Size, na.rm = T) / 
               total_sample_size * 100)
