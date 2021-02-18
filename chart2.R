@@ -3,12 +3,9 @@ library(styler)
 library(tidyverse)
 library(ggplot2)
 
-unemployment <- read.csv("Georgetown-by-race1.csv") #[LC, prof mikes suggestion!]
+unemployment <- read.csv("Georgetown-by-race1.csv") 
 
 total_sample_size <- sum(unemployment$Sample.Size)
-
-# change column name from o..Labor.Force.Status to Labor.Force.Status [LC]
-# names(unemployment)[names(unemployment) == "o..Labor.Force.Status"] <- "Labor.Force.Status" 
 
 # modified table for graphing employment by month
 new_table <- unemployment %>%
