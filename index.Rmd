@@ -95,6 +95,7 @@ increase of new covid cases over time during the pandemic.
 
 
 
+
 ## Chart 1
 ```{r echo = F}
 unemployment_by_race
@@ -112,6 +113,8 @@ employment_by_month
 This chart was intended to show the trends of employed individuals across a
 year by month. The observed data shows a significant dip during months march
 through may, slowly rising in numbers going into fall season.
+
+
 
 ## Chart 3
 ```{r, echo = F}
