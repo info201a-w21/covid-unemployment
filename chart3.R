@@ -9,21 +9,17 @@ employment<- read.csv("OECD_Data_EA-19_and_G-7.csv")
 
 View(employment)
 
-# Rename locations column in unemployment data frame 
-
-names(employment)[names(employment) == "ï..LOCATION"] <- "Location"
-
 # Filter dataset by location, time, and value 
 
 new_employment<- employment %>%
-    select(Location, TIME, Value) %>%
+    select(LOCATION, TIME, Value) %>%
     arrange(desc(TIME)) # Orders data from least recent to most recent 
 
 # Lollipop graph that shows how much fluctuation each country goes through from 2019-2021
 
 library(ggplot2)
 theme_set(theme_bw())
-employment_range <- ggplot(data = new_employment, aes(x = Location, y = Value, label = Value))+
+employment_range <- ggplot(data = new_employment, aes(x = LOCATION, y = Value, label = Value))+
   geom_point(stat = 'identity', fill = "black", size = 5) +
   geom_segment(aes(y=0, 
                    x = '0', 
