@@ -14,11 +14,14 @@ source("chart3.R")
 source("intro_summary")
 ```
 
+
+
 ## Introduction
 We are interested in “Unemployment during the Covid pandemic” because we want
 to find out how it the pandemic has contributed to unemployment and if there
 are certain groups of people who are more unemployed than others during the
 pandemic.
+
 
 
 ## Summary
@@ -35,9 +38,11 @@ death count of `r african_average_death_count`. Minority groups make up
 have been the most vulnerable during the pandemic, being more exposed to the virus and experience
 deaths at higher rates than white communities.
 
+
+
 ## Table
 
-```{r setup, include=FALSE}
+```
 kable(job_gains_or_loss_by_race)
 ```
 
@@ -62,7 +67,7 @@ Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
 Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20 of hispanic pop lost job
 
 
-```{r setup, include=FALSE}
+```
 kable(cumulative_cases_by_race)
 ```
 
@@ -76,7 +81,7 @@ positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
 
-```{r setup, include=FALSE}
+```
 kable(rate_increase_in_cases_by_race)
 ```
 
@@ -96,10 +101,12 @@ relationship between..."), render each chart, and describe pertinent
 observations found in each chart
 
 
+
 ## Chart 2
 Describe the purpose of each chart (e.g., "this chart was intended to show the
 relationship between..."), render each chart, and describe pertinent
 observations found in each chart
+
 
 
 ## Chart 3
