@@ -42,7 +42,7 @@ deaths at higher rates than white communities.
 
 ## Table
 
-```
+```{r echo = F}
 kable(job_gains_or_loss_by_race)
 ```
 
@@ -67,7 +67,7 @@ Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
 Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20% of hispanic pop lost job
 
 
-```
+```{r echo = F}
 kable(cumulative_cases_by_race)
 ```
 
@@ -81,7 +81,7 @@ positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
 
-```
+```{r echo = F}
 kable(rate_increase_in_cases_by_race)
 ```
 
@@ -96,20 +96,20 @@ increase of new covid cases over time during the pandemic.
 
 
 ## Chart 1
-Describe the purpose of each chart (e.g., "this chart was intended to show the
-relationship between..."), render each chart, and describe pertinent
-observations found in each chart
-
+```{r echo = F}
+unemployment_by_race
+```
+This chart was intended to show the relationship between race and percentage unemployed. Based on the observed data, unemployment percentages are relatively similar between races, however, white unemployment rate appear higher than African-American, Hispanic, and other races.
 
 
 ## Chart 2
-Describe the purpose of each chart (e.g., "this chart was intended to show the
-relationship between..."), render each chart, and describe pertinent
-observations found in each chart
-
-
+```{r echo = F}
+employment_by_month
+```
+This chart was intended to show the trends of employed individuals across a year by month. The observed data shows a significant dip during months march thru may, slowly rising in numbers going into fall season. 
 
 ## Chart 3
-Describe the purpose of each chart (e.g., "this chart was intended to show the
-relationship between..."), render each chart, and describe pertinent
-observations found in each chart
+```{r, echo = F}
+employment_range
+```
+Ths chart was intended to show the relationship between fluctuation of employment between EA-19 and G-7 between Nov 2019 to January 2021. The observed data shows that while countries like Japan (JPN), Korea (KOR), and Russia (RUS) did not go through much fluctuations of employment in the given timer period, countries such as Canada (CAN), Chile (CHL), Columbia (COL), and USA went through mroe employment rate fluctuations. 
