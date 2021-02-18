@@ -1,0 +1,265 @@
+Labor.Force.Status.,Race,Month of Month of Period,Education (3 levels)1,Number,Sample Size
+Employed - at work,African-American,January,High school or less,0,1706
+Employed - at work,African-American,February,High school or less,-48329.4228,1747
+Employed - at work,African-American,March,High school or less,-351382.1172,1491
+Employed - at work,African-American,April,High school or less,-1790477.471,1047
+Employed - at work,African-American,May,High school or less,-1387402.965,1092
+Employed - at work,African-American,June,High school or less,-1179712.444,1100
+Employed - at work,African-American,July,High school or less,-1110407.153,1142
+Employed - at work,African-American,August,High school or less,-1092205.899,1258
+Employed - at work,African-American,September,High school or less,-525680.7166,1608
+Employed - at work,African-American,October,High school or less,-575832.26,1650
+Employed - at work,African-American,November,High school or less,-542753.2729,1627
+Employed - at work,African-American,January,Some college/Associate's degree,0,1508
+Employed - at work,African-American,February,Some college/Associate's degree,-26546.297,1508
+Employed - at work,African-American,March,Some college/Associate's degree,-137448.0425,1280
+Employed - at work,African-American,April,Some college/Associate's degree,-1274922.221,953
+Employed - at work,African-American,May,Some college/Associate's degree,-1177783.256,938
+Employed - at work,African-American,June,Some college/Associate's degree,-693638.3447,973
+Employed - at work,African-American,July,Some college/Associate's degree,-778477.0817,965
+Employed - at work,African-American,August,Some college/Associate's degree,-695454.2276,1088
+Employed - at work,African-American,September,Some college/Associate's degree,-715482.1274,1308
+Employed - at work,African-American,October,Some college/Associate's degree,-208107.0364,1458
+Employed - at work,African-American,November,Some college/Associate's degree,-301119.6132,1432
+Employed - at work,African-American,January,Bachelor's degree or higher,0,1575
+Employed - at work,African-American,February,Bachelor's degree or higher,113443.9888,1646
+Employed - at work,African-American,March,Bachelor's degree or higher,-107805.872,1378
+Employed - at work,African-American,April,Bachelor's degree or higher,-740814.5794,1160
+Employed - at work,African-American,May,Bachelor's degree or higher,-777829.8267,1107
+Employed - at work,African-American,June,Bachelor's degree or higher,-883349.7172,1032
+Employed - at work,African-American,July,Bachelor's degree or higher,-848182.6706,1058
+Employed - at work,African-American,August,Bachelor's degree or higher,-480869.2567,1242
+Employed - at work,African-American,September,Bachelor's degree or higher,-716003.2069,1373
+Employed - at work,African-American,October,Bachelor's degree or higher,-556819.343,1447
+Employed - at work,African-American,November,Bachelor's degree or higher,-331684.8512,1474
+Employed - at work,Hispanic,January,High school or less,0,4032
+Employed - at work,Hispanic,February,High school or less,246138.9502,4166
+Employed - at work,Hispanic,March,High school or less,-1159332.25,3131
+Employed - at work,Hispanic,April,High school or less,-4313323.892,2248
+Employed - at work,Hispanic,May,High school or less,-3478321.442,2256
+Employed - at work,Hispanic,June,High school or less,-2653333.897,2309
+Employed - at work,Hispanic,July,High school or less,-2573723.411,2411
+Employed - at work,Hispanic,August,High school or less,-2305169.437,2634
+Employed - at work,Hispanic,September,High school or less,-1525292.979,3379
+Employed - at work,Hispanic,October,High school or less,-713346.6318,3748
+Employed - at work,Hispanic,November,High school or less,-557857.5924,3646
+Employed - at work,Hispanic,January,Some college/Associate's degree,0,1985
+Employed - at work,Hispanic,February,Some college/Associate's degree,133209.2071,2101
+Employed - at work,Hispanic,March,Some college/Associate's degree,101862.2915,1691
+Employed - at work,Hispanic,April,Some college/Associate's degree,-1749582.674,1228
+Employed - at work,Hispanic,May,Some college/Associate's degree,-1411020.398,1213
+Employed - at work,Hispanic,June,Some college/Associate's degree,-889105.2551,1247
+Employed - at work,Hispanic,July,Some college/Associate's degree,-821720.058,1267
+Employed - at work,Hispanic,August,Some college/Associate's degree,-515674.5518,1371
+Employed - at work,Hispanic,September,Some college/Associate's degree,-688863.6513,1649
+Employed - at work,Hispanic,October,Some college/Associate's degree,-298128.4261,1826
+Employed - at work,Hispanic,November,Some college/Associate's degree,-527581.405,1718
+Employed - at work,Hispanic,January,Bachelor's degree or higher,0,1626
+Employed - at work,Hispanic,February,Bachelor's degree or higher,-63928.0755,1655
+Employed - at work,Hispanic,March,Bachelor's degree or higher,-69246.4394,1365
+Employed - at work,Hispanic,April,Bachelor's degree or higher,-782077.194,1143
+Employed - at work,Hispanic,May,Bachelor's degree or higher,-571223.3165,1116
+Employed - at work,Hispanic,June,Bachelor's degree or higher,-322306.3594,1091
+Employed - at work,Hispanic,July,Bachelor's degree or higher,-448275.3998,1099
+Employed - at work,Hispanic,August,Bachelor's degree or higher,24614.6598,1247
+Employed - at work,Hispanic,September,Bachelor's degree or higher,-127515.9502,1467
+Employed - at work,Hispanic,October,Bachelor's degree or higher,-310067.2248,1473
+Employed - at work,Hispanic,November,Bachelor's degree or higher,-298494.9182,1423
+Employed - at work,Other,January,High school or less,0,1106
+Employed - at work,Other,February,High school or less,20452.1259,1157
+Employed - at work,Other,March,High school or less,-38797.8597,977
+Employed - at work,Other,April,High school or less,-1324157.567,607
+Employed - at work,Other,May,High school or less,-1257921.966,595
+Employed - at work,Other,June,High school or less,-912891.8656,658
+Employed - at work,Other,July,High school or less,-677109.1865,727
+Employed - at work,Other,August,High school or less,-513061.3965,807
+Employed - at work,Other,September,High school or less,-227921.2634,988
+Employed - at work,Other,October,High school or less,35268.2053,1093
+Employed - at work,Other,November,High school or less,14543.6648,1040
+Employed - at work,Other,January,Some college/Associate's degree,0,1030
+Employed - at work,Other,February,Some college/Associate's degree,-20388.7631,1012
+Employed - at work,Other,March,Some college/Associate's degree,-304559.2815,825
+Employed - at work,Other,April,Some college/Associate's degree,-1053211.984,569
+Employed - at work,Other,May,Some college/Associate's degree,-875487.9129,553
+Employed - at work,Other,June,Some college/Associate's degree,-508399.8382,631
+Employed - at work,Other,July,Some college/Associate's degree,-300783.687,704
+Employed - at work,Other,August,Some college/Associate's degree,-206417.2813,756
+Employed - at work,Other,September,Some college/Associate's degree,-177412.7159,867
+Employed - at work,Other,October,Some college/Associate's degree,-228669.4367,915
+Employed - at work,Other,November,Some college/Associate's degree,-332033.8116,824
+Employed - at work,Other,January,Bachelor's degree or higher,0,2260
+Employed - at work,Other,February,Bachelor's degree or higher,294929.5232,2425
+Employed - at work,Other,March,Bachelor's degree or higher,180182.2247,2127
+Employed - at work,Other,April,Bachelor's degree or higher,-538129.552,1869
+Employed - at work,Other,May,Bachelor's degree or higher,-417676.0394,1802
+Employed - at work,Other,June,Bachelor's degree or higher,-268661.3431,1727
+Employed - at work,Other,July,Bachelor's degree or higher,-199624.3263,1763
+Employed - at work,Other,August,Bachelor's degree or higher,-174293.9009,1855
+Employed - at work,Other,September,Bachelor's degree or higher,-187283.5542,2060
+Employed - at work,Other,October,Bachelor's degree or higher,-379726.3415,2121
+Employed - at work,Other,November,Bachelor's degree or higher,-214846.1516,2125
+Employed - at work,White,January,High school or less,0,10439
+Employed - at work,White,February,High school or less,39603.4349,10368
+Employed - at work,White,March,High school or less,-848407.2791,8990
+Employed - at work,White,April,High school or less,-6742091.437,6897
+Employed - at work,White,May,High school or less,-4453806.997,7403
+Employed - at work,White,June,High school or less,-3505385.482,7401
+Employed - at work,White,July,High school or less,-3287820.331,7672
+Employed - at work,White,August,High school or less,-2243071.699,8315
+Employed - at work,White,September,High school or less,-1311851.159,9446
+Employed - at work,White,October,High school or less,-1047547.199,9654
+Employed - at work,White,November,High school or less,-1176395.422,9504
+Employed - at work,White,January,Some college/Associate's degree,0,10584
+Employed - at work,White,February,Some college/Associate's degree,218913.9357,10720
+Employed - at work,White,March,Some college/Associate's degree,-727563.7893,9369
+Employed - at work,White,April,Some college/Associate's degree,-5808299.107,7463
+Employed - at work,White,May,Some college/Associate's degree,-4510240.064,7594
+Employed - at work,White,June,Some college/Associate's degree,-3044272.998,7697
+Employed - at work,White,July,Some college/Associate's degree,-3003527.122,7955
+Employed - at work,White,August,Some college/Associate's degree,-2828305.767,8219
+Employed - at work,White,September,Some college/Associate's degree,-2687689.655,9157
+Employed - at work,White,October,Some college/Associate's degree,-2106338.565,9473
+Employed - at work,White,November,Some college/Associate's degree,-2088471.075,9340
+Employed - at work,White,January,Bachelor's degree or higher,0,15997
+Employed - at work,White,February,Bachelor's degree or higher,283450.3194,16120
+Employed - at work,White,March,Bachelor's degree or higher,-300440.6337,14268
+Employed - at work,White,April,Bachelor's degree or higher,-3882085.651,12767
+Employed - at work,White,May,Bachelor's degree or higher,-2629056.067,12861
+Employed - at work,White,June,Bachelor's degree or higher,-2883663.589,12120
+Employed - at work,White,July,Bachelor's degree or higher,-4125513.59,12109
+Employed - at work,White,August,Bachelor's degree or higher,-2318707.143,13109
+Employed - at work,White,September,Bachelor's degree or higher,-1230449.7,14524
+Employed - at work,White,October,Bachelor's degree or higher,-669016.2167,15085
+Employed - at work,White,November,Bachelor's degree or higher,-1033113.281,14815
+Unemployed,African-American,January,High school or less,0,175
+Unemployed,African-American,February,High school or less,-8210.6612,175
+Unemployed,African-American,March,High school or less,94366.325,178
+Unemployed,African-American,April,High school or less,746747.5936,328
+Unemployed,African-American,May,High school or less,759520.4427,286
+Unemployed,African-American,June,High school or less,555464.4461,208
+Unemployed,African-American,July,High school or less,663396.7788,252
+Unemployed,African-American,August,High school or less,531096.6091,253
+Unemployed,African-American,September,High school or less,377846.9733,288
+Unemployed,African-American,October,High school or less,315472.1773,275
+Unemployed,African-American,November,High school or less,258019.3921,243
+Unemployed,African-American,January,Some college/Associate's degree,0,88
+Unemployed,African-American,February,Some college/Associate's degree,-20098.4655,89
+Unemployed,African-American,March,Some college/Associate's degree,18140.9285,90
+Unemployed,African-American,April,Some college/Associate's degree,621394.8944,213
+Unemployed,African-American,May,Some college/Associate's degree,685186.6882,214
+Unemployed,African-American,June,Some college/Associate's degree,644558.1617,191
+Unemployed,African-American,July,Some college/Associate's degree,530658.4459,168
+Unemployed,African-American,August,Some college/Associate's degree,409553.7771,160
+Unemployed,African-American,September,Some college/Associate's degree,368345.2011,177
+Unemployed,African-American,October,Some college/Associate's degree,263817.297,157
+Unemployed,African-American,November,Some college/Associate's degree,164952.157,125
+Unemployed,African-American,January,Bachelor's degree or higher,0,47
+Unemployed,African-American,February,Bachelor's degree or higher,-26732.5059,36
+Unemployed,African-American,March,Bachelor's degree or higher,-51731.4763,30
+Unemployed,African-American,April,Bachelor's degree or higher,330298.0665,119
+Unemployed,African-American,May,Bachelor's degree or higher,288614.5036,95
+Unemployed,African-American,June,Bachelor's degree or higher,335461.1694,106
+Unemployed,African-American,July,Bachelor's degree or higher,424828.9341,107
+Unemployed,African-American,August,Bachelor's degree or higher,230117.6653,84
+Unemployed,African-American,September,Bachelor's degree or higher,166929.592,83
+Unemployed,African-American,October,Bachelor's degree or higher,107740.4052,77
+Unemployed,African-American,November,Bachelor's degree or higher,186246.854,90
+Unemployed,Hispanic,January,High school or less,0,256
+Unemployed,Hispanic,February,High school or less,-59616.1262,249
+Unemployed,Hispanic,March,High school or less,75985.3674,244
+Unemployed,Hispanic,April,High school or less,1924179.816,638
+Unemployed,Hispanic,May,High school or less,1661501.95,546
+Unemployed,Hispanic,June,High school or less,1134786.489,406
+Unemployed,Hispanic,July,High school or less,974788.4778,385
+Unemployed,Hispanic,August,High school or less,696307.6639,339
+Unemployed,Hispanic,September,High school or less,574462.4619,385
+Unemployed,Hispanic,October,High school or less,452298.3555,353
+Unemployed,Hispanic,November,High school or less,398736.4208,341
+Unemployed,Hispanic,January,Some college/Associate's degree,0,84
+Unemployed,Hispanic,February,Some college/Associate's degree,-20879.2464,78
+Unemployed,Hispanic,March,Some college/Associate's degree,157686.7613,105
+Unemployed,Hispanic,April,Some college/Associate's degree,1107838.369,308
+Unemployed,Hispanic,May,Some college/Associate's degree,1056630.408,276
+Unemployed,Hispanic,June,Some college/Associate's degree,899291.8691,223
+Unemployed,Hispanic,July,Some college/Associate's degree,698393.8095,204
+Unemployed,Hispanic,August,Some college/Associate's degree,417657.4864,149
+Unemployed,Hispanic,September,Some college/Associate's degree,379144.0721,170
+Unemployed,Hispanic,October,Some college/Associate's degree,261570.6077,154
+Unemployed,Hispanic,November,Some college/Associate's degree,189126.405,130
+Unemployed,Hispanic,January,Bachelor's degree or higher,0,38
+Unemployed,Hispanic,February,Bachelor's degree or higher,8319.8811,40
+Unemployed,Hispanic,March,Bachelor's degree or higher,92218.0406,47
+Unemployed,Hispanic,April,Bachelor's degree or higher,585447.0041,153
+Unemployed,Hispanic,May,Bachelor's degree or higher,588390.0892,145
+Unemployed,Hispanic,June,Bachelor's degree or higher,541058.7816,125
+Unemployed,Hispanic,July,Bachelor's degree or higher,438361.0472,116
+Unemployed,Hispanic,August,Bachelor's degree or higher,406893.0013,111
+Unemployed,Hispanic,September,Bachelor's degree or higher,321564.0219,101
+Unemployed,Hispanic,October,Bachelor's degree or higher,254258.7442,88
+Unemployed,Hispanic,November,Bachelor's degree or higher,256318.2636,92
+Unemployed,Other,January,High school or less,0,72
+Unemployed,Other,February,High school or less,-2107.8523,67
+Unemployed,Other,March,High school or less,52239.261,68
+Unemployed,Other,April,High school or less,647783.6486,262
+Unemployed,Other,May,High school or less,647578.1704,239
+Unemployed,Other,June,High school or less,616186.1353,201
+Unemployed,Other,July,High school or less,406854.2597,153
+Unemployed,Other,August,High school or less,439628.4608,175
+Unemployed,Other,September,High school or less,284518.9684,164
+Unemployed,Other,October,High school or less,185608.2432,143
+Unemployed,Other,November,High school or less,169890.0384,134
+Unemployed,Other,January,Some college/Associate's degree,0,41
+Unemployed,Other,February,Some college/Associate's degree,14405.4596,38
+Unemployed,Other,March,Some college/Associate's degree,60371.7947,51
+Unemployed,Other,April,Some college/Associate's degree,473588.045,182
+Unemployed,Other,May,Some college/Associate's degree,514599.6965,171
+Unemployed,Other,June,Some college/Associate's degree,323503.9838,118
+Unemployed,Other,July,Some college/Associate's degree,418161.8947,135
+Unemployed,Other,August,Some college/Associate's degree,289743.955,108
+Unemployed,Other,September,Some college/Associate's degree,177673.5805,100
+Unemployed,Other,October,Some college/Associate's degree,149670.4443,91
+Unemployed,Other,November,Some college/Associate's degree,123065.1153,68
+Unemployed,Other,January,Bachelor's degree or higher,0,66
+Unemployed,Other,February,Bachelor's degree or higher,-37649.9078,51
+Unemployed,Other,March,Bachelor's degree or higher,6924.6148,61
+Unemployed,Other,April,Bachelor's degree or higher,444480.3849,193
+Unemployed,Other,May,Bachelor's degree or higher,389921.5576,158
+Unemployed,Other,June,Bachelor's degree or higher,412858.692,147
+Unemployed,Other,July,Bachelor's degree or higher,405803.2689,140
+Unemployed,Other,August,Bachelor's degree or higher,284189.2201,121
+Unemployed,Other,September,Bachelor's degree or higher,232049.7001,137
+Unemployed,Other,October,Bachelor's degree or higher,221537.7954,132
+Unemployed,Other,November,Bachelor's degree or higher,167050.4181,114
+Unemployed,White,January,High school or less,0,501
+Unemployed,White,February,High school or less,-103649.6167,482
+Unemployed,White,March,High school or less,-44161.9256,455
+Unemployed,White,April,High school or less,3004582.743,1458
+Unemployed,White,May,High school or less,2329478.033,1179
+Unemployed,White,June,High school or less,1407739.715,864
+Unemployed,White,July,High school or less,1222593.843,792
+Unemployed,White,August,High school or less,812613.4776,699
+Unemployed,White,September,High school or less,721673.9931,730
+Unemployed,White,October,High school or less,458097.0242,633
+Unemployed,White,November,High school or less,431664.5888,616
+Unemployed,White,January,Some college/Associate's degree,0,323
+Unemployed,White,February,Some college/Associate's degree,10774.6091,344
+Unemployed,White,March,Some college/Associate's degree,150772.2966,347
+Unemployed,White,April,Some college/Associate's degree,3312759.203,1376
+Unemployed,White,May,Some college/Associate's degree,2569534.803,1054
+Unemployed,White,June,Some college/Associate's degree,1923374.208,820
+Unemployed,White,July,Some college/Associate's degree,1622427.514,737
+Unemployed,White,August,Some college/Associate's degree,1049901.428,598
+Unemployed,White,September,Some college/Associate's degree,1094537.416,654
+Unemployed,White,October,Some college/Associate's degree,759695.3976,549
+Unemployed,White,November,Some college/Associate's degree,733800.1732,540
+Unemployed,White,January,Bachelor's degree or higher,0,304
+Unemployed,White,February,Bachelor's degree or higher,-8952.28,309
+Unemployed,White,March,Bachelor's degree or higher,220841.2986,347
+Unemployed,White,April,Bachelor's degree or higher,2718959.524,1096
+Unemployed,White,May,Bachelor's degree or higher,2154781.257,920
+Unemployed,White,June,Bachelor's degree or higher,2195459.653,870
+Unemployed,White,July,Bachelor's degree or higher,2198294.011,874
+Unemployed,White,August,Bachelor's degree or higher,1518430.625,715
+Unemployed,White,September,Bachelor's degree or higher,1018540.493,606
+Unemployed,White,October,Bachelor's degree or higher,699253.1275,505
+Unemployed,White,November,Bachelor's degree or higher,620845.8248,472

@@ -2,7 +2,7 @@ library(stringr)
 library(tidyverse)
 install.packages("openintro")
 library(openintro)
-covid_data <- read.csv("./covid_race.csv", row.names = NULL)
+covid_data <- read.csv("covid_race.csv", row.names = NULL)
 
 covid_data <- covid_data %>% 
   mutate(Date = as.Date(as.character(Date), format = "%Y%m%d"))
@@ -12,12 +12,12 @@ summary_info <- list()
 
 #--------------------------------------------------------------------------------------------------
 # Calculate which state has the highest amount of deaths
-summary_info$state_with_the_most_cases <- covid_data %>% 
+summary_info$state_with_the_most_deaths <- covid_data %>% 
   filter(Date == max(Date)) %>% 
   filter(Deaths_Total == max(Deaths_Total, na.rm = T)) %>% 
   pull((State)) 
   
-summary_info$state_with_the_most_cases <- abbr2state(summary_info$state_with_the_most_cases)
+summary_info$state_with_the_most_deaths <- abbr2state(summary_info$state_with_the_most_deaths)
 #--------------------------------------------------------------------------------------------------
 #which state has the most black deaths
 summary_info$state_with_the_most_black_deaths <- covid_data %>% 
