@@ -74,13 +74,9 @@ Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
 
 ## Hispanics with COVID out of the total Hispanics population 
 
-<<<<<<< HEAD
 ```{r echo = F, comment = "", prompt = FALSE}
-Hispanics_covid_ratio
-=======
-```{r echo=F, comment = "", prompt = FALSE}
 Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
->>>>>>> 0d9d15d1b7e05ed89d3e20f257ee8cd588db1960
+
 ```
 
 
