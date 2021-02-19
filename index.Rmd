@@ -14,6 +14,7 @@ source("chart2.R")
 source("chart3.R")
 source("table.R")
 source("intro_summary.R")
+knitr::kable(rate_increase_in_cases_by_race, format = "markdown")
 ```
 
 
@@ -42,14 +43,12 @@ deaths at higher rates than white communities.
 
 
 
-## Table
-
-```{r echo = F}
+```{r echo = F, message = FALSE}
 kable(job_gains_or_loss_by_race)
 ```
 
-For the Covid Unemployment data, we renamed some columns for better
-readibility and calculated the summary of the total change in the number of
+For the COVID Unemployment data, we renamed some columns for better
+readability and calculated the summary of the total change in the number of
 job gains or loss by each four race, that being African-American, Hispanic,
 Other, and White. We thought that this might give us an insight as to
 which racial communities are most impacted and have lost the most jobs due to
@@ -62,27 +61,41 @@ loss of unemployment during the pandemic.
 
 ## White with COVID outside of total white population 
 
+<<<<<<< HEAD
 ```{r echo=F, comment="", prompt= TRUE}
 white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
+=======
+```{r echo = F, comment="", prompt= FALSE, null_prefix=TRUE}
+white_covid_ratio
+>>>>>>> 55e0d847ba5cc7b2d0670f22f08b20771e0dfeb4
 ```
 
 ## African-Americans with COVID out of the total African American population 
 
 ```{r echo = F, comment="", prompt = FALSE}
-Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
+Black_covid_ratio 
 ```
 
 
 ## Hispanics with COVID out of the total Hispanics population 
 
-```{r echo=F, comment = "", prompt = FALSE}
-Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
+```{r echo = F, comment = "", prompt = FALSE}
+Hispanics_covid_ratio 
+
 ```
 
 
+## Aggregate Table Script: Cumulative Cases by Race 
 ```{r echo = F}
+<<<<<<< HEAD
 kable(cumulative_cases_by_race) 
+=======
+kable(cumulative_cases_by_race)
+>>>>>>> 55e0d847ba5cc7b2d0670f22f08b20771e0dfeb4
 ```
+
+
+
 
 For the Covid By Race data, decided to calculate the total cases of covid
 by each racial group to further determine which racial groups have been
@@ -94,10 +107,10 @@ positive than Whites until October 14, where Whites and Unknown races
 test more positive than Hispanics and Blacks.
 
 
+## Aggregate Table Script: Rate of Increase in cases by Race
 ```{r echo = F}
 kable(rate_increase_in_cases_by_race)
 ```
-
 
 For the Covid By Race data, decided to calculate the rate of increase of new
 covid cases by each racial group to further determine which racial groups
@@ -105,8 +118,6 @@ have been most impacted by covid. We found that on May 3, the rate
 of increase in new covid cases was 480.3 among Native Hawaiian/Pacific
 Islanders. In addition, African Americans also have the greatest rate of
 increase of new covid cases over time during the pandemic.
-
-
 
 
 ## Chart 1
