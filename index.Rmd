@@ -63,7 +63,7 @@ loss of unemployment during the pandemic.
 ## White with COVID outside of total white population 
 
 ```{r echo=F, comment="", prompt= TRUE}
-white_covid_ratio
+white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
 ```
 
 ## African-Americans with COVID out of the total African American population 
@@ -81,7 +81,7 @@ Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
 
 
 ```{r echo = F}
-kable(cumulative_cases_by_race) <- 33146501 / 234370202 # 14% of white pop lost jobs
+kable(cumulative_cases_by_race) 
 ```
 
 For the Covid By Race data, decided to calculate the total cases of covid

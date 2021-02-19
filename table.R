@@ -47,15 +47,15 @@ cumulative_cases_by_race <- covid_by_race %>%
   group_by(State) %>%
   arrange(Date) %>%
   summarize(Date = as.Date(as.character(Date), format = "%Y%m%d"),
-            White = Cases_White,
-            Black = Cases_Black,
-            "Hispanic/Latino" = Cases_Latinx,
-            Asian = Cases_Asian,
-            "American Indian/Alaska Native" = Cases_AIAN,
-            "Native Hawaiian/Pacific Islander" = Cases_NHPI,
-            Multiracial = Cases_Multiracial,
-            Other = Cases_Other,
-            Unknown = Cases_Unknown) 
+            White = sum(Cases_White),
+            Black = sum(Cases_Black),
+            "Hispanic/Latino" = sum(Cases_Latinx),
+            Asian = sum(Cases_Asian),
+            "American Indian/Alaska Native" = sum(Cases_AIAN),
+            "Native Hawaiian/Pacific Islander" = sum(Cases_NHPI),
+            Multiracial = sum(Cases_Multiracial),
+            Other = sum(Cases_Other),
+            Unknown = sum(Cases_Unknown)) 
 
 # Rate of increase of new COVID cases by racial group in the US 
 rate_increase_in_cases_by_race <- covid_by_race %>%
