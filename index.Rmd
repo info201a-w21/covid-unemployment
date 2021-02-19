@@ -59,19 +59,27 @@ pandemic, with the race with the highest impact is White, but proportionally
 to their populations, Hispanic and African-Americans are more impacted by the
 loss of unemployment during the pandemic.
 
+
+## White with COVID outside of total white population 
+
 ```{r echo=F}
-# White with covid out of total white pop
-white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
+white_covid_ratio
 ```
+
+
+
+## African-Americans with COVID out of the total African American population 
 
 ```{r echo = F}
-# African-Americans with covid out of total Africa-American pop
-Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
+Black_covid_ratio 
 ```
 
+
+
+## Hispanics with COVID out of the total Hispanics population 
+
 ```{r echo=F}
-# Hispanics with covid out of total Hispanics pop
-Hispanics_covid_ratio <- 12195967 / 60600000 # 20% of hispanic pop lost jobs
+Hispanics_covid_ratio
 ```
 
 
