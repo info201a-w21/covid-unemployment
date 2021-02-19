@@ -59,14 +59,20 @@ pandemic, with the race with the highest impact is White, but proportionally
 to their populations, Hispanic and African-Americans are more impacted by the
 loss of unemployment during the pandemic.
 
+```{r echo=F}
 # White with covid out of total white pop
-white_covid_ratio <- 33,146,501 / 234,370,202 # 14% of white pop lost jobs
+white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
+```
 
+```{r echo = F}
 # African-Americans with covid out of total Africa-American pop
-Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
+Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
+```
 
+```{r echo=F}
 # Hispanics with covid out of total Hispanics pop
-Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20% of hispanic pop lost jobs
+Hispanics_covid_ratio <- 12195967 / 60600000 # 20% of hispanic pop lost jobs
+```
 
 
 ```{r echo = F}
@@ -102,6 +108,7 @@ increase of new covid cases over time during the pandemic.
 ```{r echo = F}
 unemployment_by_race
 ```
+
 This chart was intended to show the relationship between race and percentage
 unemployed. Based on the observed data, unemployment percentages are relatively
 similar between races, however, white unemployment rate appear higher than
@@ -112,6 +119,7 @@ African-American, Hispanic, and other races.
 ```{r echo = F}
 employment_by_month
 ```
+
 This chart was intended to show the trends of employed individuals across a
 year by month. The observed data shows a significant dip during months march
 through may, slowly rising in numbers going into fall season.
@@ -122,7 +130,8 @@ through may, slowly rising in numbers going into fall season.
 ```{r, echo = F}
 employment_range
 ```
-Ths chart was intended to show the relationship between fluctuation of
+
+This chart was intended to show the relationship between fluctuation of
 employment between EA-19 and G-7 between Nov 2019 to January 2021.
 The observed data shows that while countries like Japan (JPN), Korea (KOR),
 and Russia (RUS) did not go through much fluctuations of employment in the
