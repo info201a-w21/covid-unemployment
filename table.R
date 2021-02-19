@@ -1,14 +1,15 @@
 
 library(tidyverse)
 library(knitr)
+library(dplyr)
 
-covid_unemployment <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/Georgetown-by-race.csv")
+covid_unemployment <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/Georgetown-by-race1.csv")
 View(covid_unemployment)
 
-covid_by_race <- read.csv("CRDT Data - CRDT.csv")
+covid_by_race <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/CRDT%20Data%20-%20CRDT.csv")
 View(covid_by_race)
 
-employment_rate_global <- read.csv("Employment-rate-global.csv")
+employment_rate_global <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/Employment-rate-global.csv")
 View(employment_rate_global)
 
 
@@ -16,12 +17,11 @@ View(employment_rate_global)
 # Covid unemployment --------
 
 # rename some columns
-covid_unemployment %>%
-  colnames(covid_unemployment) %>%
-  colnames(covid_unemployment)[colnames(covid_unemployment) == "Labor.Force.Status"] <- "labor_status"
+  colnames(covid_unemployment)[colnames(covid_unemployment) == "Labor.Force.Status."] <- "labor_status"
   colnames(covid_unemployment)[colnames(covid_unemployment) == "Month.of.Month.of.Period"] <- "month"
   colnames(covid_unemployment)[colnames(covid_unemployment) == "Education..3.levels.1"] <- "education_level"
-  colnames(covid_unemployment)[colnames(covid_unemployment) == "Sample.size"] <- "sample_size"
+  colnames(covid_unemployment)[colnames(covid_unemployment) == "Sample.Size"] <- "sample_size"
+  View(covid_unemployment)
  
 # Number of loss or gain jobs by race
 job_gains_or_loss_by_race <- covid_unemployment %>%
@@ -29,13 +29,13 @@ job_gains_or_loss_by_race <- covid_unemployment %>%
   summarize(total_change = sum(Number)) # Biggest impact on White community
   
 # White with covid out of total white pop
-white_covid_ratio <- 33,146,501 / 234,370,202 # 14% of white pop lost jobs
+white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
 
 # African-Americans with covid out of total Africa-American pop
-Black_covid_ratio <- 9,971,075 / 44,100,000 # 22.6% of black pop lost jobs
+Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
 
 # Hispanics with covid out of total Hispanics pop
-Hispanics_covid_ratio <- 12,195,967 / 60,600,000 # 20 of hispanic pop lost jobs
+Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
 
 
 
