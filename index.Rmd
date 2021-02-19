@@ -12,6 +12,7 @@ library(tidyverse)
 source("chart1.R")
 source("chart2.R")
 source("chart3.R")
+source("table.R")
 source("intro_summary.R")
 ```
 
