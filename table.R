@@ -45,6 +45,7 @@ Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
 # Cumulative total cases of COVID by racial group in the US
 cumulative_cases_by_race <- covid_by_race %>%
   group_by(State) %>%
+  filter(Date == max(Date)) %>%
   arrange(Date) %>%
   summarize(Date = as.Date(as.character(Date), format = "%Y%m%d"),
             White = sum(Cases_White),
