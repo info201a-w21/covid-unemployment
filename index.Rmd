@@ -25,6 +25,13 @@ to find out how it the pandemic has contributed to unemployment and if there
 are certain groups of people who are more unemployed than others during the
 pandemic.
 
+For our first dataset about employment rate, we sourced it from data.oecd.org.
+
+For our second dataset about COVID racial data tracker, we sourced it from
+covidtracking.com
+
+For our third dataset about unemployment based on race, we sourced it from
+cew.georgetown.edu. 
 
 
 ## Summary
