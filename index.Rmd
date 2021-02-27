@@ -94,9 +94,6 @@ kable(cumulative_cases_by_race)
 >>>>>>> 55e0d847ba5cc7b2d0670f22f08b20771e0dfeb4
 ```
 
-
-
-
 For the Covid By Race data, decided to calculate the total cases of covid
 by each racial group to further determine which racial groups have been
 most impacted by covid. Based on the table, multiracial groups,
