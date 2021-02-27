@@ -138,7 +138,10 @@ employment_by_month
 
 This chart was intended to show the trends of employed individuals across a
 year by month. The observed data shows a significant dip during months march
-through may, slowly rising in numbers going into fall season.
+through may, slowly rising in numbers going into fall season.This may be due to
+many factors like recruiting season, seasonal jobs, or correspond with COVID-19
+infection trends. Another explanation could be that companies are adapting to
+online formats and we see more virtual positions open up.
 
 
 
