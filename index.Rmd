@@ -25,6 +25,14 @@ to find out how it the pandemic has contributed to unemployment and if there
 are certain groups of people who are more unemployed than others during the
 pandemic.
 
+For our first dataset about employment rate, we sourced it from data.oecd.org, 
+which is a government dataset.
+
+For our second dataset about COVID racial data tracker, we sourced it from
+covidtracking.com, which appears to be a journalistic dataset.
+
+For our third dataset about unemployment based on race, we sourced it from
+cew.georgetown.edu, which appears to be an academic dataset.
 
 
 ## Summary
@@ -94,9 +102,6 @@ kable(cumulative_cases_by_race)
 >>>>>>> 55e0d847ba5cc7b2d0670f22f08b20771e0dfeb4
 ```
 
-
-
-
 For the Covid By Race data, decided to calculate the total cases of covid
 by each racial group to further determine which racial groups have been
 most impacted by covid. Based on the table, multiracial groups,
@@ -138,7 +143,7 @@ employment_by_month
 
 This chart was intended to show the trends of employed individuals across a
 year by month. The observed data shows a significant dip during months march
-through may, slowly rising in numbers going into fall season.This may be due to
+through may, slowly rising in numbers going into fall season. This may be due to
 many factors like recruiting season, seasonal jobs, or correspond with COVID-19
 infection trends. Another explanation could be that companies are adapting to
 online formats and we see more virtual positions open up.

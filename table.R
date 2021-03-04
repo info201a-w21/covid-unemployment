@@ -25,7 +25,10 @@ View(employment_rate_global)
  
 # Number of loss or gain jobs by race
 job_gains_or_loss_by_race <- covid_unemployment %>%
-  group_by(Race) %>%
+  group_by(Race, month) %>%
+  filter(month != "February", month != "April", month != "May", 
+         month != "June", month != "July", month != "August", 
+         month != "September", month != "October") %>%
   summarize(total_change = sum(Number)) # Biggest impact on White community
   
 # White with covid out of total white pop
@@ -35,7 +38,7 @@ white_covid_ratio <- 33146501 / 234370202 # 14% of white pop lost jobs
 Black_covid_ratio <- 9971075 / 44100000 # 22.6% of black pop lost jobs
 
 # Hispanics with covid out of total Hispanics pop
-Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
+Hispanics_covid_ratio <- 12195967 / 60600000 # 20% of hispanic pop lost jobs
 
 
 
@@ -45,6 +48,7 @@ Hispanics_covid_ratio <- 12195967 / 60600000 # 20 of hispanic pop lost jobs
 # Cumulative total cases of COVID by racial group in the US
 cumulative_cases_by_race <- covid_by_race %>%
   group_by(State) %>%
+  filter(Date == max(Date)) %>%
   arrange(Date) %>%
   summarize(Date = as.Date(as.character(Date), format = "%Y%m%d"),
             White = sum(Cases_White),
