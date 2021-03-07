@@ -16,7 +16,29 @@ ui <- navbarPage(
 page_one <- tabPanel(
   "Introduction", # label for the tab in the navbar
   titlePanel("Welcome!"), # show with a displayed title
+  sidebarLayout(
+    sidebarPanel(
+      p("For this project, we wanted to explore unemployment during the Covid 19
+        pandemic because we want to find out how the pandemic has contributed 
+        to unemployment and if there are certain groups of people who are more 
+        affected than others during the pandemic."
+    ),
+    h3("Questions we you hope to answer:"),
+    p("1. Which race/groups of people are most unemployed during the pandemic?"),
+    p("When was unemployment at its highest during the pandemic?"),
+    p("Which month(s) have the highest death rates?"),
+    h3("Data we are using to answer these questions:"),
+    p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
+    p("Unemployment rate: https://data.oecd.org/emp/employment-rate.htm"),
+    p("COVID racial data tracker: https://covidtracking.com/race"),
+    p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
 )
+),
+    mainPanel(
+      img("covid_unemployment", src = "unemployment_covid.jpg")
+      )
+)
+
 
 page_two <- tabPanel(
   "Interactive Viz 1", # label for the tab in the navbar
@@ -47,7 +69,17 @@ page_four <- tabPanel(
 
 page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
+  sidebarLayout(
+    sidebarPanel(
+      h2("3 major takeaways"),
+    p("1. lorem ipsum"),
+    p("2. lorem ipsum"),
+    p("3. lorem ipsum"))
+  )
 )
+
+mainPanel(
+  img("unemployment", src = "unemployment.jpg"))
 
 # Tammy's input widgets
 # select y variable (age groups)
