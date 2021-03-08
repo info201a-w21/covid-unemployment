@@ -23,8 +23,8 @@ time_stamp <- checkboxGroupInput(
 )
 
 employment_visual <- tabPanel(
-  "Percentage of total working age population (15-64)",
-  titlePanel("Bat chart that shows the percentage of total working age population (15-64)"),
+  "Employment data)",
+  titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
 
         sidebarLayout(
            sidebarPanel(region_input, time_stamp),
