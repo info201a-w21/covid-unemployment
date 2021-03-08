@@ -1,5 +1,10 @@
 # Load libraries
 library("shiny")
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(plotly)
 
 # Source in `app_ui.R` and `app_server.R`
 source("app_ui.R")
