@@ -1,20 +1,18 @@
 # Load in OECD data
 employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/LCfinalproject/data/OECD_df.csv")
 
-# Load maps data 
-library(maps)
-map_data <- map_data("world")
-
 # Rename column and restructure data frame
 names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "a3"
 
 employment_merge <- merge(employment_data, iso3166, by = "a3")
 
 names(employment_merge)[names(employment_merge) == "ISOname"] <- "region"
+names(employment_merge)[names(employment_merge) == "TIME"] <- "Quarter"
 
 employment_merge <- employment_merge %>%
   mutate(change_in_value= Value - lag(Value, default = 0))%>%
-  select(a3, TIME, Value, region, change_in_value)
+  arrange(Quarter)%>%
+  select(a3, Quarter, Value, region, change_in_value)
 
 # Visual interactive chart/map 
 
@@ -28,14 +26,15 @@ employment_merge <- employment_merge %>%
       })
       
       employment_new <- employment_merge %>%
-        group_by(TIME)%>%
+        arrange(desc(Quarter))%>%
         filter(region %in% input$regionName)%>%
-        filter(TIME %in% input$Timeline)
+        filter(Quarter %in% input$Timeline)
       
       bar_chart<- ggplot(data = employment_new, 
-             mapping = aes(x = TIME, y = Value, fill = change_in_value)
+                         aes(x = Quarter, y = Value, fill = change_in_value)
       )+
-        geom_bar(position = "dodge", stat = "identity")+
+        geom_point()+
+        geom_segment(aes(x = Quarter, xend = Quarter, y = 0, yend = Value))
         theme_light()+
         labs(title = "Percentage of total working age population (15-64)",
              x = "Quarter",

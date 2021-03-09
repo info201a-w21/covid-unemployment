@@ -6,7 +6,7 @@ employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covi
 
 # Bar chart
 choose_region <- unique(employment_merge$region)
-choose_time <- unique(employment_merge$TIME)
+choose_time <- unique(employment_merge$Quarter)
 
 region_input <- selectInput(
   inputId = "regionName",
@@ -19,11 +19,11 @@ time_stamp <- checkboxGroupInput(
   inputId = "Timeline",
   label = "Choose a Quarter",
   choices = c(choose_time),
-  selected = "2019-Q3"
+  selected = "2019-Q1"
 )
 
 employment_visual <- tabPanel(
-  "Employment data)",
+  "Employment data",
   titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
 
         sidebarLayout(
