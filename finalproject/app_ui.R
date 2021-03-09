@@ -21,8 +21,7 @@ page_one <- tabPanel(
       p("For this project, we wanted to explore unemployment during the Covid 19
         pandemic because we want to find out how the pandemic has contributed 
         to unemployment and if there are certain groups of people who are more 
-        affected than others during the pandemic."
-    ),
+        affected than others during the pandemic."),
     h3("Questions we you hope to answer:"),
     p("1. Which race/groups of people are most unemployed during the pandemic?"),
     p("When was unemployment at its highest during the pandemic?"),
@@ -32,30 +31,32 @@ page_one <- tabPanel(
     p("Unemployment rate: https://data.oecd.org/emp/employment-rate.htm"),
     p("COVID racial data tracker: https://covidtracking.com/race"),
     p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
-)
-),
+    ),
     mainPanel(
       img("covid_unemployment", src = "unemployment_covid.jpg")
       )
+  )
 )
 
 
 page_two <- tabPanel(
   "Interactive Viz 1", # label for the tab in the navbar
   titlePanel("Unemployment by Race during Covid"),
-  sidebarPanel(
-    age_input,
-    color_input
-  ),
-  mainPanel(
-    plotlyOutput(outputId = "unemployment"),
-    h2("About this chart"),
-    p("This chart reveals trends between race groups in the U.S. based on
-      unemployment rate during the Covid-19 pandemic, as compared to the
-      previous year, 2019. The dropdown menu allows filtering between a
-      variety of age groups.", em("Note: (his_lat stands for Hispanic or
-      Latino ethnicity, which can be of any race)."), "This dataset comes 
-      from the", em("U.S. Bureau Labor of Statistics."))
+    sidebarLayout(
+       sidebarPanel(
+      age_input,
+      color_input
+    ),
+    mainPanel(
+      plotlyOutput(outputId = "unemployment"),
+      h2("About this chart"),
+      p("This chart reveals trends between race groups in the U.S. based on
+        unemployment rate during the Covid-19 pandemic, as compared to the
+        previous year, 2019. The dropdown menu allows filtering between a
+        variety of age groups.", em("Note: (his_lat stands for Hispanic or
+        Latino ethnicity, which can be of any race)."), "This dataset comes 
+        from the", em("U.S. Bureau Labor of Statistics."))
+    ) 
   )
 )
 
@@ -72,9 +73,11 @@ page_five <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("3 major takeaways"),
-    p("1. lorem ipsum"),
-    p("2. lorem ipsum"),
-    p("3. lorem ipsum"))
+      p("1. lorem ipsum"),
+      p("2. lorem ipsum"),
+      p("3. lorem ipsum")
+    ),
+    mainPanel()
   )
 )
 
