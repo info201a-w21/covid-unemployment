@@ -33,11 +33,16 @@ employment_merge <- employment_merge %>%
       bar_chart<- ggplot(data = employment_new, 
                          aes(x = Quarter, y = Value, fill = change_in_value)
       )+
-        geom_point()+
-        geom_segment(aes(x = Quarter, xend = Quarter, y = 0, yend = Value))
+        geom_point(color="orange", size = 4)+
+        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = Value))
         theme_light()+
+        theme(
+          panel.grid.major.x = element_blank(),
+          panel.border = element_blank(),
+          axis.ticks.x = element_blank()
+        )+
         labs(title = "Percentage of total working age population (15-64)",
-             x = "Quarter",
+             x = "",
              y = "Change in the percentage of total working population",
              fill = "Percent of Working age Population")
       
