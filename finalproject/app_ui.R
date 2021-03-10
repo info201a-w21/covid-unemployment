@@ -61,7 +61,7 @@ page_two <- tabPanel(
 
 
 page_three <- tabPanel(
-  "Interactive Viz 2", # label for the tab in the navbar
+  "Interactive Viz 2" # label for the tab in the navbar
 )
 page_four <- tabPanel(
   "Interactive Viz 3",
