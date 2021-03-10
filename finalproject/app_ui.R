@@ -27,7 +27,7 @@ page_one <- tabPanel(
     p("Which month(s) have the highest death rates?"),
     h3("Data we are using to answer these questions:"),
     p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
-    p("Unemployment rate: https://data.oecd.org/emp/employment-rate.htm"),
+    p("Employment rate: https://data.oecd.org/emp/employment-rate.htm"),
     p("COVID racial data tracker: https://covidtracking.com/race"),
     p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
     ),
@@ -36,7 +36,6 @@ page_one <- tabPanel(
       )
   )
 )
-
 
 page_two <- tabPanel(
   "Interactive Viz 1", # label for the tab in the navbar
@@ -59,12 +58,11 @@ page_two <- tabPanel(
   )
 )
 
-
 page_three <- tabPanel(
   "Interactive Viz 2" # label for the tab in the navbar
 )
 page_four <- tabPanel(
-  "Interactive Viz 3",
+  "Employment Data",
   # Interactive chart
   employment_total <- tabPanel(
     "Total working population employment data",
