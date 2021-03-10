@@ -1,5 +1,5 @@
 # Load in OECD data
-employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/LCfinalproject/data/OECD_df.csv")
+employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/LCfinalproject/data/OECD_newdf.csv")
 
 # Rename column and restructure data frame
 names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "a3"
@@ -9,9 +9,10 @@ employment_merge <- merge(employment_data, iso3166, by = "a3")
 names(employment_merge)[names(employment_merge) == "ISOname"] <- "region"
 names(employment_merge)[names(employment_merge) == "TIME"] <- "Quarter"
 
-employment_merge <- employment_merge %>%
-  mutate(change_in_value= Value - lag(Value, default = 0))%>%
+employment_new <- employment_merge %>%
+  mutate(change_in_value= Value-lag(Value, default = 0))%>%
   arrange(Quarter)%>%
+  filter(Quarter >= 2019)%>%
   select(a3, Quarter, Value, region, change_in_value)
 
 # Visual interactive chart/map 
@@ -25,7 +26,7 @@ employment_merge <- employment_merge %>%
               input$regionName, "that is measured in the choosen quarter(s).")
       })
       
-      employment_total <- employment_merge %>%
+      employment_total <- employment_new %>%
         arrange(desc(Quarter))%>%
         filter(region %in% input$regionName)%>%
         filter(Quarter %in% input$Timeline)
