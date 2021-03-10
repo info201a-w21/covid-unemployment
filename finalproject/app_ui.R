@@ -3,17 +3,13 @@ library(ggplot2)
 library(plotly)
 library(tidyverse)
 
-
 ui <- navbarPage(
   "Final Project",
   page_one,
   page_two,
   page_three,
   page_four,
-  page_five,
-  "Employment data",
-  employment_total,
-  employment_visual
+  page_five
 )
 
 page_one <- tabPanel(
@@ -69,8 +65,70 @@ page_three <- tabPanel(
 
 page_four <- tabPanel(
   "Interactive Viz 3", # label for the tab in the navbar
+  choose_country <- unique(employment_merge$Country),
+  # input variables for total employment 
+  input_country <- selectInput(
+    inputId = "name_of_country",
+    label = "Choose a country",
+    choices = c(choose_country),
+    selected = "Australia"
+  ),
+  stamp_time <- checkboxGroupInput(
+    inputId = "pick_a_quarter",
+    label = "Choose a Quarter",
+    choices = c("2019-Q1" = "2019-Q1",
+                "2019-Q2" = "2019-Q2",
+                "2019-Q3" = "2019-Q3",
+                "2019-Q4" = "2019-Q4",
+                "2020-Q1" = "2020_Q1",
+                "2020-Q2" = "2020-Q2",
+                "2020-Q3" = "2020-Q3",
+                "2020-Q4" = "2020-Q4"),
+    selected = "2019-Q1"
+  ),
+  employment_total <- tabPanel(
+    "Total working population employment data",
+    titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
+    
+    sidebarLayout(
+      sidebarPanel(input_country, stamp_time),
+      mainPanel(textOutput("new_text"),
+                plotlyOutput("new_chart"))
+    )
+  ),
+  # variables for change in employment
+  choose_country <- unique(employment_merge$Country),
+  
+  country_input <- selectInput(
+    inputId = "countryName",
+    label = "Choose a country",
+    choices = c(choose_country),
+    selected = "Australia"
+  ),
+  time_stamp <- checkboxGroupInput(
+    inputId = "Timeline",
+    label = "Choose a Quarter",
+    choices = c("2019-Q1" = "2019-Q1",
+                "2019-Q2" = "2019-Q2",
+                "2019-Q3" = "2019-Q3",
+                "2019-Q4" = "2019-Q4",
+                "2020-Q1" = "2020_Q1",
+                "2020-Q2" = "2020-Q2",
+                "2020-Q3" = "2020-Q3",
+                "2020-Q4" = "2020-Q4"),
+    selected = "2019-Q1"
+  ),
+  employment_visual <- tabPanel(
+    "Change in total working population employment data",
+    titlePanel("Bar chart that shows the change in percentage of total working age population (15-64)"),
+    
+    sidebarLayout(
+      sidebarPanel(country_input, time_stamp),
+      mainPanel(textOutput("display_text"),
+                plotlyOutput("bar_chart"))
+    ) 
+  )
 )
-
 page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
   sidebarLayout(
@@ -80,7 +138,8 @@ page_five <- tabPanel(
       p("2. lorem ipsum"),
       p("3. lorem ipsum")
     ),
-    mainPanel()
+    mainPanel(textOutput("display_text")# this is put in here just as a placeholder, feel free to take out "display_text"
+  )
   )
 )
 
@@ -105,82 +164,6 @@ color_input <- selectInput(
   label = "Choose a color palette",
   choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
 )
-
-# Second chart: Employment data
-choose_country <- unique(employment_merge$Country)
-
-input_country <- selectInput(
-  inputId = "name_of_country",
-  label = "Choose a country",
-  choices = c(choose_country),
-  selected = "Australia"
-)
-
-stamp_time <- checkboxGroupInput(
-  inputId = "pick_a_quarter",
-  label = "Choose a Quarter",
-  choices = c("2019-Q1" = "2019-Q1",
-              "2019-Q2" = "2019-Q2",
-              "2019-Q3" = "2019-Q3",
-              "2019-Q4" = "2019-Q4",
-              "2020-Q1" = "2020_Q1",
-              "2020-Q2" = "2020-Q2",
-              "2020-Q3" = "2020-Q3",
-              "2020-Q4" = "2020-Q4"),
-  selected = "2019-Q1"
-)
-
-employment_total <- tabPanel(
-  "Total working population employment data",
-  titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
-  
-  sidebarLayout(
-    sidebarPanel(input_country, stamp_time),
-    mainPanel(textOutput("new_text"),
-              plotlyOutput("new_chart"))
-  )
-)
-choose_country <- unique(employment_merge$Country)
-
-country_input <- selectInput(
-  inputId = "countryName",
-  label = "Choose a country",
-  choices = c(choose_country),
-  selected = "Australia"
-)
-
-time_stamp <- checkboxGroupInput(
-  inputId = "Timeline",
-  label = "Choose a Quarter",
-  choices = c("2019-Q1" = "2019-Q1",
-              "2019-Q2" = "2019-Q2",
-              "2019-Q3" = "2019-Q3",
-              "2019-Q4" = "2019-Q4",
-              "2020-Q1" = "2020_Q1",
-              "2020-Q2" = "2020-Q2",
-              "2020-Q3" = "2020-Q3",
-              "2020-Q4" = "2020-Q4"),
-  selected = "2019-Q1"
-)
-
-
-employment_visual <- tabPanel(
-  "Change in total working population employment data",
-  titlePanel("Bar chart that shows the change in percentage of total working age population (15-64)"),
-  
-  sidebarLayout(
-    sidebarPanel(country_input, time_stamp),
-    mainPanel(textOutput("display_text"),
-              plotlyOutput("bar_chart"))
-  ) 
-)
-
-
-
-
-
-
-
 
 
 
