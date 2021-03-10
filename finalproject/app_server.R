@@ -6,7 +6,7 @@ library(tidyverse)
 
 # Tammy's interactive stuff, chart set up:
 # unemployment graph by race, total (both female and male)
-unemploy <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/unemploy_by_race_bureau.csv", header = T)
+unemploy <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemploy_by_race_bureau.csv", header = T)
 
 # Renaming columns, preparing for chart
 unemploy <- rename(unemploy, race = ï..race)
