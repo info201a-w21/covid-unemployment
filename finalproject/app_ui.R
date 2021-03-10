@@ -135,7 +135,7 @@ color_input <- selectInput(
 
 # Lynn's input widgets (employment)
 # For total working age population
-choose_country <- unique(employment_merge$Country)
+choose_country <- unique(employment_new$Country)
 
 input_country <- selectInput(
   inputId = "name_of_country",
@@ -157,7 +157,7 @@ stamp_time <- checkboxGroupInput(
   selected = "2019-Q1")
 
 # For change in total working age population 
-choose_country <- unique(employment_merge$Country)
+choose_country <- unique(employment_new$Country)
 
 country_input <- selectInput(
   inputId = "countryName",
