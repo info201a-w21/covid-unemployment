@@ -108,7 +108,7 @@ server <- function(input, output){
       geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = Value), 
                    color = "grey")+
       theme_minimal()+
-      labs(title = "Total percentage working age population (15-64)",
+      labs(title = "Total percentage of the working age (15-64) population",
            x = "Quarter(s)",
            y = "Percent of total working population")
     ggplotly(new_chart)
@@ -131,7 +131,7 @@ server <- function(input, output){
       geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = change_in_value), 
                    color = "grey")+
       theme_minimal()+
-      labs(title = "Changes in total working age population (15-64)",
+      labs(title = "Change in total working age (15-64) population",
            x = "Quarter(s)",
            y = "Percent of change in total working population")
     ggplotly(bar_chart)

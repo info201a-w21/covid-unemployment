@@ -68,7 +68,7 @@ page_four <- tabPanel(
   # Interactive chart
   employment_total <- tabPanel(
     "Total working population employment data",
-    titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
+    titlePanel("Chart that shows total the percentage of total working age (15-64) population"),
     sidebarLayout(
       sidebarPanel(input_country, stamp_time),
       mainPanel(textOutput("new_text"),
@@ -77,13 +77,29 @@ page_four <- tabPanel(
 ),
   employment_visual <- tabPanel(
     "Change in total working population employment data",
-    titlePanel("Bar chart that shows the change in percentage of total working age population (15-64)"),
+    titlePanel("Chart that shows the change in percentage of total working age (15-64) population"),
     sidebarLayout(
       sidebarPanel(country_input, time_stamp),
       mainPanel(textOutput("display_text"),
-                plotlyOutput("bar_chart"))
+                plotlyOutput("bar_chart")),
     )
-  )
+  ),
+ employment_analysis <- tabPanel(
+   "Analysis",
+   titlePanel("Analysis of the Charts"),
+   h1("Analysis of the charts"),
+   p("This chart shows the employment trends for all countries from January 2019 to December 2020. The 
+         first graph allows the user to see how the total employment population, ages 15-64, changes
+         between the years and/or quarters. The dropdown menu allows users to choose the country they desire
+         along with the quarter(s). The second chart shows the changes in the total employment population 
+         based on quarters, which is every 3 months. Since some quarters had an increase in total employment, 
+         while other quarters had a decrease in total employment, this allows the viewer to be able to see
+         how darastic the increase or decrease was for the respective quarter(s). The dropdown menus are the 
+         same for both charts in case the viewer wants to see how the total employment changed along with how 
+         much the total employment changed between quarter(s) and/or year(s). This dataset comes from",
+     a("Organisation for Economic Co-operation and Development"),
+     herf= "https://data.oecd.org/emp/employment-rate.htm"),
+ )
 )
 
 page_five <- tabPanel(
