@@ -31,7 +31,7 @@ employment_visual <- tabPanel(
            mainPanel(textOutput("display_text"),
                      plotlyOutput("bar_chart"))
         )
-        )
+        ) 
 
 ui <- navbarPage(
   "Employment data",

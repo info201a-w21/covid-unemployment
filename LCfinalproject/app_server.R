@@ -25,16 +25,15 @@ employment_merge <- employment_merge %>%
               input$regionName, "that is measured in the choosen quarter(s).")
       })
       
-      employment_new <- employment_merge %>%
+      employment_total <- employment_merge %>%
         arrange(desc(Quarter))%>%
         filter(region %in% input$regionName)%>%
         filter(Quarter %in% input$Timeline)
       
-      bar_chart<- ggplot(data = employment_new, 
-                         #aes(x = Quarter, y = Value)
-      )+
-        geom_point(aes(x= Quarter, y = Value), color="orange", size = 2)+
-        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = Value))
+      #need to make a legend 
+      bar_chart<- ggplot(data = employment_total)+
+        geom_point(aes(x = Quarter, y = change_in_value), color="orange", size = 2)+
+        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = change_in_value))+
         theme_light()+
         theme(
           panel.grid.major.x = element_blank(),
@@ -42,13 +41,11 @@ employment_merge <- employment_merge %>%
           axis.ticks.x = element_blank()
         )+
         labs(title = "Percentage of total working age population (15-64)",
-             x = "",
-             y = "Change in the percentage of total working population",
-             fill = "Percent of Working age Population")
-      
+             x = "Quarter(s)",
+             y = "Percentage of total working population")
       
       ggplotly(bar_chart)
       return(bar_chart)
-      
+
     })
   }
