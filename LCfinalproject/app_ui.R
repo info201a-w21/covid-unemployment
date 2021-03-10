@@ -2,7 +2,7 @@
 source("app_server.R")
 
 # read in data 
-employment_data <- read.csv("data/OECD_newdf.csv")
+employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/OECD_data/OECD_newdf.csv")
 
 # Interactive chart
 choose_country <- unique(employment_merge$Country)
