@@ -81,9 +81,13 @@ employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covi
 
 # Rename column and restructure data frame
 names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "Alpha_3"
+
 employment_merge <- merge(employment_data, ISO_3166_1, by = "Alpha_3")
+
 names(employment_merge)[names(employment_merge) == "Name"] <- "Country"
+
 names(employment_merge)[names(employment_merge) == "TIME"] <- "Quarter"
+
 employment_new <- employment_merge %>%
   select(Alpha_3, Quarter, Value, Country)%>%
   arrange(employment_merge, Quarter)%>%

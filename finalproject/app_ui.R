@@ -85,7 +85,6 @@ page_four <- tabPanel(
  employment_analysis <- tabPanel(
    "Analysis",
    titlePanel("Analysis of the Charts"),
-   h1("Analysis of the charts"),
    p("This chart shows the employment trends for all countries from January 2019 to December 2020. The 
          first graph allows the user to see how the total employment population, ages 15-64, changes
          between the years and/or quarters. The dropdown menu allows users to choose the country they desire
