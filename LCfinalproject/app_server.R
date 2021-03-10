@@ -1,21 +1,21 @@
 # Load in OECD data
-employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/LCfinalproject/data/OECD_newdf.csv")
+employment_data <- read.csv("data/OECD_newdf.csv")
 
 # Rename column and restructure data frame
-names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "a3"
+names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "Alpha_3"
 
-employment_merge <- merge(employment_data, iso3166, by = "a3")
+employment_merge <- merge(employment_data, ISO_3166_1, by = "Alpha_3")
 
-names(employment_merge)[names(employment_merge) == "ISOname"] <- "region"
+names(employment_merge)[names(employment_merge) == "Name"] <- "Country"
 names(employment_merge)[names(employment_merge) == "TIME"] <- "Quarter"
 
 employment_new <- employment_merge %>%
+  select(Alpha_3, Quarter, Value, Country)%>%
+  arrange(employment_merge, Quarter)%>%
   mutate(change_in_value= Value-lag(Value, default = 0))%>%
-  arrange(Quarter)%>%
-  filter(Quarter >= 2019)%>%
-  select(a3, Quarter, Value, region, change_in_value)
+  filter(Quarter >= 2019)
 
-# Visual interactive chart/map 
+# Visual interactive chart/map
 
   server <- function(input, output){
     
@@ -28,7 +28,7 @@ employment_new <- employment_merge %>%
       
       employment_total <- employment_new %>%
         arrange(desc(Quarter))%>%
-        filter(region %in% input$regionName)%>%
+        filter(Country %in% input$countryName)%>%
         filter(Quarter %in% input$Timeline)
       
       #need to make a legend 
