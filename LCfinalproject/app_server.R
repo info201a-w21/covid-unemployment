@@ -31,9 +31,9 @@ employment_merge <- employment_merge %>%
         filter(Quarter %in% input$Timeline)
       
       bar_chart<- ggplot(data = employment_new, 
-                         aes(x = Quarter, y = Value, fill = change_in_value)
+                         #aes(x = Quarter, y = Value)
       )+
-        geom_point(color="orange", size = 4)+
+        geom_point(aes(x= Quarter, y = Value), color="orange", size = 2)+
         geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = Value))
         theme_light()+
         theme(
