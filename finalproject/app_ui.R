@@ -67,16 +67,15 @@ page_three <- tabPanel(
 
 page_four <- tabPanel(
   "Interactive Viz 3", # label for the tab in the navbar
-  choose_country <- unique(employment_merge$Country),
-  
-  # input variables for total employment 
+  # Interactive chart
+  choose_country <- unique(employment_merge$Country
+),
   input_country <- selectInput(
     inputId = "name_of_country",
     label = "Choose a country",
     choices = c(choose_country),
     selected = "Australia"
-  ),
-  
+),
   stamp_time <- checkboxGroupInput(
     inputId = "pick_a_quarter",
     label = "Choose a Quarter",
@@ -89,29 +88,22 @@ page_four <- tabPanel(
                 "2020-Q3" = "2020-Q3",
                 "2020-Q4" = "2020-Q4"),
     selected = "2019-Q1"
-  ),
-  
+),
   employment_total <- tabPanel(
     "Total working population employment data",
     titlePanel("Bar chart that shows the percentage of total working age population (15-64)"),
-    
     sidebarLayout(
       sidebarPanel(input_country, stamp_time),
       mainPanel(textOutput("new_text"),
                 plotlyOutput("new_chart"))
-    )
-  ),
-  
-  # variables for change in employment
+)
+),
   choose_country <- unique(employment_merge$Country),
-  
   country_input <- selectInput(
     inputId = "countryName",
     label = "Choose a country",
     choices = c(choose_country),
-    selected = "Australia"
-  ),
-  
+    selected = "Australia"),
   time_stamp <- checkboxGroupInput(
     inputId = "Timeline",
     label = "Choose a Quarter",
@@ -124,18 +116,16 @@ page_four <- tabPanel(
                 "2020-Q3" = "2020-Q3",
                 "2020-Q4" = "2020-Q4"),
     selected = "2019-Q1"
-  ),
-  
+),
   employment_visual <- tabPanel(
     "Change in total working population employment data",
     titlePanel("Bar chart that shows the change in percentage of total working age population (15-64)"),
-    
     sidebarLayout(
       sidebarPanel(country_input, time_stamp),
       mainPanel(textOutput("display_text"),
                 plotlyOutput("bar_chart"))
-    )
-  )
+)
+)
 )
 
 page_five <- tabPanel(
@@ -152,6 +142,7 @@ page_five <- tabPanel(
 )
 mainPanel(
   img("unemployment", src = "unemployment.jpg"))
+
 # Tammy's input widgets
 # select y variable (age groups)
 age_input <- selectInput(
@@ -163,6 +154,7 @@ age_input <- selectInput(
               "ages_35_to_44", "ages_45_to_54", "ages_55_and_over",
               "ages_55_to_64", "ages_65_and_over")
 )
+
 # select color of unemployment chart
 color_input <- selectInput(
   inputId = "color",
