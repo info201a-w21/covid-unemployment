@@ -15,15 +15,44 @@ employment_new <- employment_merge %>%
   mutate(change_in_value= Value-lag(Value, default = 0))%>%
   filter(Quarter >= 2019)
 
-# Visual interactive chart/map
-
+# Visual interactive chart
   server <- function(input, output){
     
+    output$new_chart <- renderPlotly({ 
+      
+      output$new_text <- renderText({
+        paste("This chart shows the total percentage of total working age population in",
+              input$name_of_country, "that is measured in the choosen quarter(s).")
+      })
+      
+      
+      employment_final <- employment_new %>%
+        arrange(desc(Quarter))%>%
+        filter(Country %in% input$name_of_country)%>%
+        filter(Quarter %in% input$pick_a_quarter)
+      
+      
+      new_chart<- ggplot(data = employment_final, x = Quarter, y = Value,
+                         fill = Value)+
+        geom_point(aes(x = Quarter, y = Value), 
+                   color="blue", size = 2)+
+        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = Value), 
+                     color = "grey")+
+        theme_minimal()+
+        labs(title = "Total percentage working age population (15-64)",
+             x = "Quarter(s)",
+             y = "Percent of total working population")
+      
+      ggplotly(new_chart)
+      return(new_chart)
+      
+    })
+  
     output$bar_chart <- renderPlotly({
       
       output$display_text <- renderText({
-        paste("This chart shows the percentage of total working age population in",
-              input$regionName, "that is measured in the choosen quarter(s).")
+        paste("This chart shows the change in percentage of total working age population in",
+              input$countryName, "that is measured in the choosen quarter(s).")
       })
       
       employment_total <- employment_new %>%
@@ -32,21 +61,18 @@ employment_new <- employment_merge %>%
         filter(Quarter %in% input$Timeline)
       
       #need to make a legend 
-      bar_chart<- ggplot(data = employment_total)+
-        geom_point(aes(x = Quarter, y = change_in_value), color="orange", size = 2)+
-        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = change_in_value))+
-        theme_light()+
-        theme(
-          panel.grid.major.x = element_blank(),
-          panel.border = element_blank(),
-          axis.ticks.x = element_blank()
-        )+
-        labs(title = "Percentage of total working age population (15-64)",
+      bar_chart<- ggplot(data = employment_total, x = Quarter, y = change_in_value,
+                         fill = change_in_value)+
+        geom_point(aes(x = Quarter, y = change_in_value), 
+                   color="orange", size = 2)+
+        geom_segment(aes(x = Quarter, xend = Quarter, y=1, yend = change_in_value), 
+                     color = "grey")+
+        theme_minimal()+
+        labs(title = "Changes in total working age population (15-64)",
              x = "Quarter(s)",
-             y = "Percentage of total working population")
+             y = "Percent of change in total working population")
       
       ggplotly(bar_chart)
       return(bar_chart)
-
     })
   }
