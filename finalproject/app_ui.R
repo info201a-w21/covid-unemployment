@@ -32,7 +32,7 @@ page_one <- tabPanel(
     p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
     ),
     mainPanel(
-      img("covid_unemployment", src = "unemployment_covid.jpg")
+      img("covid_unemployment", src = "~/Desktop/INFO 201/Group Project/project-covid-unemployment/finalproject/unemployment_covid.jpg")
       )
   )
 )
@@ -112,7 +112,7 @@ page_five <- tabPanel(
   )
 )
 mainPanel(
-  img("unemployment", src = "unemployment.jpg"))
+  img("unemployment", src = "~/Desktop/INFO 201/Group Project/project-covid-unemployment/finalproject/unemployment.jpg"))
 
 # Tammy's input widgets
 # select y variable (age groups)
