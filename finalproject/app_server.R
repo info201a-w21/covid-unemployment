@@ -12,7 +12,7 @@ unemploy <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemp
 unemploy <- rename(unemploy, race = ï..race)
 unemploy$year <- sapply(unemploy$year, toString)
 
-# Lynn's interactive stuff, chart setup and mainpualtion
+# Lynn's interactive stuff, chart setup and manipulation
 # Load in OECD data
 employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/OECD_data/OECD_newdf.csv")
 
