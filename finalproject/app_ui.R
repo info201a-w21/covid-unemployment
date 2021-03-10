@@ -27,7 +27,7 @@ page_one <- tabPanel(
     p("Which month(s) have the highest death rates?"),
     h3("Data we are using to answer these questions:"),
     p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
-    p("Unemployment rate: https://data.oecd.org/emp/employment-rate.htm"),
+    p("Employment rate: https://data.oecd.org/emp/employment-rate.htm"),
     p("COVID racial data tracker: https://covidtracking.com/race"),
     p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
     ),
@@ -36,7 +36,6 @@ page_one <- tabPanel(
       )
   )
 )
-
 
 page_two <- tabPanel(
   "Interactive Viz 1", # label for the tab in the navbar
@@ -59,12 +58,11 @@ page_two <- tabPanel(
   )
 )
 
-
 page_three <- tabPanel(
   "Interactive Viz 2" # label for the tab in the navbar
 )
 page_four <- tabPanel(
-  "Interactive Viz 3",
+  "Employment Data",
   # Interactive chart
   employment_total <- tabPanel(
     "Total working population employment data",
@@ -87,7 +85,6 @@ page_four <- tabPanel(
  employment_analysis <- tabPanel(
    "Analysis",
    titlePanel("Analysis of the Charts"),
-   h1("Analysis of the charts"),
    p("This chart shows the employment trends for all countries from January 2019 to December 2020. The 
          first graph allows the user to see how the total employment population, ages 15-64, changes
          between the years and/or quarters. The dropdown menu allows users to choose the country they desire
