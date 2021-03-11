@@ -32,7 +32,8 @@ page_one <- tabPanel(
     p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
     ),
     mainPanel(
-      img("covid_unemployment", src = "~/Desktop/INFO 201/Group Project/project-covid-unemployment/finalproject/unemployment_covid.jpg")
+      img("COVID and unemployment",
+      src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemployment.jpg", width = "800", height = "550")
       )
   )
 )
