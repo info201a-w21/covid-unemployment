@@ -2,7 +2,7 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(tidyverse)
-source("app_server.R")
+#source("app_server.R")
 
 ui <- navbarPage(
   "Final Project",
