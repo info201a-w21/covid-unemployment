@@ -14,10 +14,10 @@ unemploy$year <- sapply(unemploy$year, toString)
 
 # Lynn's interactive stuff, chart setup and manipulation
 # Load in OECD data
-employment_data <- read.csv("OECD_data/OECD_newdf.csv", header = T)
+employment_data <- read_csv("OECD_data/OECD_newdf.csv")
 
 # Rename column and restructure data frame
-names(employment_data)[names(employment_data) == "ï..LOCATION"] <- "Alpha_3"
+names(employment_data)[names(employment_data) == "LOCATION"] <- "Alpha_3"
 
 employment_merge <- merge(employment_data, ISO_3166_1, by = "Alpha_3")
 

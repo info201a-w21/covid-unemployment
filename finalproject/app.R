@@ -6,6 +6,7 @@ library(tidyr)
 library(tidyverse)
 library(plotly)
 library(ISOcodes)
+library(readr)
 
 # Source in `app_ui.R` and `app_server.R`
 source("app_ui.R")
