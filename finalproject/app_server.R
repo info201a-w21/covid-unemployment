@@ -14,7 +14,7 @@ unemploy$year <- sapply(unemploy$year, toString)
 
 # Lynn's interactive stuff, chart setup and manipulation
 # Load in OECD data
-employment_data <- read_csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/OECD_data/OECD_newdf.csv")
+employment_data <- read_csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/OECD_newdf.csv")
 
 # Rename column and restructure data frame
 names(employment_data)[names(employment_data) == "LOCATION"] <- "Alpha_3"
