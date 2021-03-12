@@ -99,3 +99,4 @@ color_input <- selectInput(
   label = "Choose a color palette",
   choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
 )
+
