@@ -10,13 +10,15 @@ result_type_input <- radioButtons( #check is this is right
   inputId = "result_type", 
   choices = c("cases", "hospilizations", "deaths"),  
   selected = "cases",
-  label = "Choose what kind of data to graph"
+  label = "Choose what kind of data to graph",
+  choiceNames = NULL,
+  choiceValues = NULL
 )
 
 race_input <- checkboxGroupInput(
   inputId = "race",
   choices = c("white", "black", "latinx", "asian"),
-  selected = "white", "black", "latinx", "asian",
+  selected = c("white", "black", "latinx", "asian"),
   label = "Choose a race"
 )
 
@@ -25,9 +27,8 @@ time_input <- sliderInput(
   label = "Choose the year",
   min = as.Date("2020-04-12","%Y-%m-%d"),
   max = as.Date("2021-02-10","%Y-%m-%d"),
-  value = c(as.Date("2020-04-12"), as.Date("2021-02-10"),),
-  timeFormat= "%Y-%m-%d",
-  label = "Time"
+  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
+  timeFormat= "%Y-%m-%d"
 )
 
 
@@ -37,11 +38,12 @@ page_five <- tabPanel(
     sidebarPanel(
       h1("Graph heading"),
       result_type_input, 
-      race_input, 
+     # race_input, 
       time_input,
     ),
     mainPanel(
       plotlyOutput(outputId = "line"), 
+      p(""),
       p("Although at times the rates are nearly the same, minorities still experinces higher rates of cases, hospilaizations, and deaths.
         Just like with unemployment, the minority experinces a higher rates than white people, indicating the poor and unfair conditions
         they experince in US. Althought they make up a small portion of the the country, they ultimately are suffering at higher rates,

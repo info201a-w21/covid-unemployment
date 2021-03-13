@@ -5,7 +5,6 @@ library(openintro)
 
 covid_data <- read.csv("covid_race.csv")
 
-covid_data <- as.Date(covid_data$Date, format = "%Y%m%d")
 
 mod_covid_data <- covid_data %>% 
   group_by(Date) %>% 
@@ -48,8 +47,13 @@ mod_covid_data <- covid_data %>%
   mutate(percent_change_asian_hospilizations = new_asian_hosp / lag(national_hosp_asian, n = 1, default = 0) * 100) %>% 
   
   mutate_all(funs(ifelse(is.na(.), 0, .))) %>% 
-  #lnf into value of 0
-  select(Date, percent_change_white_cases, percent_change_black_cases, percent_change_latinx_cases, percent_change_asian_cases, 
+  mutate(Date = as.character(Date)) %>% 
+  mutate(Date = as.Date(Date, format = "%Y%m%d"))
+
+  mod_covid_data[sapply(mod_covid_data, Negate(is.finite))] <- 0 
+
+
+  updated_covid_data <- select(mod_covid_data, Date, percent_change_white_cases, percent_change_black_cases, percent_change_latinx_cases, percent_change_asian_cases, 
          percent_change_white_deaths, percent_change_black_deaths, percent_change_latinx_deaths, percent_change_asian_deaths,
          percent_change_white_hospilizations, percent_change_black_hospilizations, percent_change_latinx_hospilizations, percent_change_asian_hospilizations) %>% 
   pivot_longer(cols = c("percent_change_white_cases", "percent_change_black_cases", "percent_change_latinx_cases", "percent_change_asian_cases",
@@ -58,25 +62,27 @@ mod_covid_data <- covid_data %>%
                         "percent_change_asian_hospilizations"),
                names_to = "result_types", 
                values_to = "percent_change") 
-
-  mutate(mod_covid_data, Date = as.Date(mod_covid_data$Date, format = "%Y%m%d"))
- 
-# how to pivot this so i can change both the result type and y variable
-# how to convert data column into an actual date rather than a number
+  
 
 server <- function(input, output) {
-  output$line <-renderPlotly({
-    chart <- ggplot(mod_covid_data %in% 
-                filter(result_types %in% input$result_type) %in% #should i use the contains method instead of this
-                  filter(result_types %in% input$race) %in%      #not sure if this format works to properly filter the data
-                    filter(Date >= input$x_var[1], Date <= input$x_var[2])) +
-      geom_line(aes(x = Date, y = percent_change, color = race)) +
+  output$line <- renderPlotly({
+    dataset <- updated_covid_data %>% 
+      filter(str_detect(result_types,input$result_type)) %>% 
+      #filter(str_detect(result_types, input$race)) %>% 
+      filter(Date >= input$x_var[1], Date <= input$x_var[2])
+    chart <- ggplot(dataset) +
+      geom_line(aes(x = Date, y = percent_change, color = result_types)) +
       labs(title = "Covid Racial Health Rate Impact", x = "Time (Date)", y = "Percent Change", 
-           color = "Race")
-    
+           color = "Type of Informations")
+
     ggplotly(chart)
   })
 }
+
+
+
+
+
 
 
   
