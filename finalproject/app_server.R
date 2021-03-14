@@ -94,7 +94,6 @@ server <- function(input, output) {
 <<<<<<< HEAD
   
   # Add your server stuff in here
-}
 =======
 # Lynn's visual interactive chart
     output$new_chart <- renderPlotly({
@@ -144,5 +143,4 @@ server <- function(input, output) {
     })
     #Add your server stuff here 
   }
-
 >>>>>>> d3b7cc495d8eb0e6f9cbfe29add8da88a145b7a9
