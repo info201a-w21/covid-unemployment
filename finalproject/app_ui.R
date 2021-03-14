@@ -24,8 +24,8 @@ page_one <- tabPanel(
         affected than others during the pandemic."),
     h3("Questions we you hope to answer:"),
     p("1. Which race/groups of people are most unemployed during the pandemic?"),
-    p("2. When was unemployment at its highest during the pandemic?"),
-    p("3. Which month(s) have the highest death rates?"),
+    p("2. Which month(s) have the highest death rates?"),
+    p("3. When was unemployment at its highest during the pandemic?"),
     h3("Data we are using to answer these questions:"),
     p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
     p("Employment rate: https://data.oecd.org/emp/employment-rate.htm"),
@@ -138,9 +138,22 @@ page_five <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("3 major takeaways"),
-      p("1. lorem ipsum"),
-      p("2. lorem ipsum"),
-      p("3. lorem ipsum")
+      p("1. According to the insights gathered from the visualizations, Blacks 
+      and Latinx continue to have the highest unemployment rates from ages 18
+      and up until ages 45-54, where it was about even with Asians. Then Blacks
+      continued to take the lead in the highest unemployment rate for ages 65 
+      and up. This wasn't too shocking, given that people of color in this 
+        country often suffer the most."),
+      p("2. We learned that the highest covid cases in US was from April to May, 
+      and it was highest among people who were Asian. The highest hospitalizations 
+      was in November, with Asians, Latinx, and Blacks taking the lead. The 
+      highest deaths occurred in April among the Latinx population. These 
+        findings weren't surprising and it matches with our findings from the 
+        first visualization where people of color were the most impacted."),
+      p("3. We learned that decrease in employment in most countries occurred
+        during Quarter 2 of 2020, which began around April, which correlates
+        with the rest of our insights which concluded that the biggest impact 
+        among COVID cases and unemployment began around April.")
     ),
     mainPanel(
       h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
