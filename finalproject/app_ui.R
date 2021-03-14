@@ -74,10 +74,11 @@ page_three <- tabPanel(
       plotlyOutput(outputId = "line"), 
       h2("About this chart"),
       p("Although at times the rates are nearly the same, minorities still experinces higher rates of cases, hospilaizations, and deaths.
-        Just like with unemployment, the minority experinces a higher rates than white people, indicating the poor and unfair conditions
-        they experince in US. Althought they make up a small portion of the the country, they ultimately are suffering at higher rates,
-        whether through unemployemnt or covid-related health issues. This data helps expose how a lot minority groups live in bad environments
-        and are not always receiving the proper treatment, revealing the hidden inqeualities they live in the US.")
+        Just like with unemployment, the minority community have higher rates of covid cases, hospitalizations, and deaths, than white people, 
+        indicating the poor and unfair conditions minority groups experince in US. Althought they make up a small portion of the the country, 
+        they ultimately are suffering at higher rates, whether through unemployemnt or covid-related health issues. This data helps expose how 
+        a lot minority groups live in bad environments and are not always receiving the proper treatment, revealing the hidden inqeualities 
+        inside the United States.")
     )
   )
 )
