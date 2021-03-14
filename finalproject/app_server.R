@@ -32,7 +32,7 @@ employment_new <- employment_merge %>%
   filter(Quarter >= 2019)
 
 #Jonathan's chart data
-covid_data <- read.csv("covid_race.csv")
+covid_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/covid_race.csv")
 
 mod_covid_data <- covid_data %>% 
   group_by(Date) %>% 
