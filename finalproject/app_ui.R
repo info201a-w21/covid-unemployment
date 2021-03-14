@@ -73,12 +73,17 @@ page_three <- tabPanel(
     mainPanel(
       plotlyOutput(outputId = "line"), 
       h2("About this chart"),
-      p("Although at times the rates are nearly the same, minorities still experinces higher rates of cases, hospilaizations, and deaths.
-        Just like with unemployment, the minority community have higher rates of covid cases, hospitalizations, and deaths, than white people, 
-        indicating the poor and unfair conditions minority groups experince in US. Althought they make up a small portion of the the country, 
-        they ultimately are suffering at higher rates, whether through unemployemnt or covid-related health issues. This data helps expose how 
-        a lot minority groups live in bad environments and are not always receiving the proper treatment, revealing the hidden inqeualities 
-        inside the United States.")
+      p("Although at times the rates are nearly the same, minorities still 
+      experinces higher rates of cases, hospilaizations, and deaths.
+        Just like with unemployment, the minority community have higher rates 
+        of covid cases, hospitalizations, and deaths, than white people, 
+        indicating the poor and unfair conditions minority groups experince in 
+        US. Althought they make up a small portion of the the country, they 
+        ultimately are suffering at higher rates, whether through unemployemnt 
+        or covid-related health issues. This data helps expose how a lot 
+        minority groups live in bad environments and are not always receiving 
+        the proper treatment, revealing the hidden inqeualities inside the 
+        United States.")
     )
   )
 )
@@ -108,17 +113,21 @@ page_four <- tabPanel(
  employment_analysis <- tabPanel(
    "Analysis",
    titlePanel("Analysis of the Charts"),
-   p("This chart shows the employment trends for all countries from January 2019 to December 2020. The 
-         first graph allows the user to see how the total employment population, ages 15-64, changes
-         between the years and/or quarters. The dropdown menu allows users to choose the country they desire
-         along with the quarter(s). The second chart shows the changes in the total employment population 
-         based on quarters, which is every 3 months. Since some quarters had an increase in total employment, 
-         while other quarters had a decrease in total employment, this allows the viewer to be able to see
-         how darastic the increase or decrease was for the respective quarter(s). The dropdown menus are the 
-         same for both charts in case the viewer wants to see how the total employment changed along with how 
-         much the total employment changed between quarter(s) and/or year(s). Some general patterns in the dataset 
-         are that in Quarter 2020-Q2, most countries have the biggest decrease in employment, that is, the greatest
-         unemployment for that quarter, which makes sense becase 2020-Q2 is when COVID hit. This data set comes from",
+   p("This chart shows the employment trends for all countries from January 2019
+   to December 2020. The first graph allows the user to see how the total 
+   employment population, ages 15-64, changes between the years and/or quarters.
+   The dropdown menu allows users to choose the country they desire along with 
+   the quarter(s). The second chart shows the changes in the total employment 
+   population based on quarters, which is every 3 months. Since some quarters 
+   had an increase in total employment, while other quarters had a decrease in 
+   total employment, this allows the viewer to be able to see how darastic the 
+   increase or decrease was for the respective quarter(s). The dropdown menus 
+   are the same for both charts in case the viewer wants to see how the total 
+   employment changed along with how much the total employment changed between 
+   quarter(s) and/or year(s). Some general patterns in the dataset are that in 
+   Quarter 2020-Q2, most countries have the biggest decrease in employment, 
+   that is, the greatest unemployment for that quarter, which makes sense 
+     because 2020-Q2 is when COVID hit. This data set comes from",
      a("Organisation for Economic Co-operation and Development"),
      herf= "https://data.oecd.org/emp/employment-rate.htm"),
  )
