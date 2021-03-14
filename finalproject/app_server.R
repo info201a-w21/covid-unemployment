@@ -60,18 +60,18 @@ mod_covid_data <- covid_data %>%
          new_latinx_hosp = national_hosp_latinx - lag(national_hosp_latinx, n = 1),
          new_asian_hosp = national_hosp_asian - lag(national_hosp_asian, n = 1)) %>%
   
-  mutate(percent_change_white_cases = new_white_cases / lag(national_cases_white, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_black_cases = new_white_cases / lag(national_cases_black, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_latinx_cases = new_white_cases / lag(national_cases_latinx, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_asian_cases = new_white_cases / lag(national_cases_asian, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_white_deaths = new_white_deaths / lag(national_deaths_white, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_black_deaths = new_black_deaths / lag(national_deaths_black, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_latinx_deaths = new_latinx_deaths / lag(national_deaths_latinx, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_asian_deaths = new_asian_deaths / lag(national_deaths_asian, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_white_hospilizations = new_white_hosp / lag(national_hosp_white, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_black_hospilizations = new_black_hosp / lag(national_hosp_black, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_latinx_hospilizations = new_latinx_hosp / lag(national_hosp_latinx, n = 1, default = 0) * 100) %>% 
-  mutate(percent_change_asian_hospilizations = new_asian_hosp / lag(national_hosp_asian, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_white_Cases = new_white_cases / lag(national_cases_white, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_black_Cases = new_white_cases / lag(national_cases_black, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_latinx_Cases = new_white_cases / lag(national_cases_latinx, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_asian_Cases = new_white_cases / lag(national_cases_asian, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_white_Deaths = new_white_deaths / lag(national_deaths_white, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_black_Deaths = new_black_deaths / lag(national_deaths_black, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_latinx_Deaths = new_latinx_deaths / lag(national_deaths_latinx, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_asian_Deaths = new_asian_deaths / lag(national_deaths_asian, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_white_Hospilizations = new_white_hosp / lag(national_hosp_white, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_black_Hospilizations = new_black_hosp / lag(national_hosp_black, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_latinx_Hospilizations = new_latinx_hosp / lag(national_hosp_latinx, n = 1, default = 0) * 100) %>% 
+  mutate(percent_change_asian_Hospilizations = new_asian_hosp / lag(national_hosp_asian, n = 1, default = 0) * 100) %>% 
   
   mutate_all(funs(ifelse(is.na(.), 0, .))) %>% 
   mutate(Date = as.character(Date)) %>% 
@@ -80,13 +80,13 @@ mod_covid_data <- covid_data %>%
 mod_covid_data[sapply(mod_covid_data, Negate(is.finite))] <- 0 
 
 
-updated_covid_data <- select(mod_covid_data, Date, percent_change_white_cases, percent_change_black_cases, percent_change_latinx_cases, percent_change_asian_cases, 
-                             percent_change_white_deaths, percent_change_black_deaths, percent_change_latinx_deaths, percent_change_asian_deaths,
-                             percent_change_white_hospilizations, percent_change_black_hospilizations, percent_change_latinx_hospilizations, percent_change_asian_hospilizations) %>% 
-  pivot_longer(cols = c("percent_change_white_cases", "percent_change_black_cases", "percent_change_latinx_cases", "percent_change_asian_cases",
-                        "percent_change_white_deaths", "percent_change_black_deaths", "percent_change_latinx_deaths", "percent_change_asian_deaths",
-                        "percent_change_white_hospilizations", "percent_change_black_hospilizations", "percent_change_latinx_hospilizations", 
-                        "percent_change_asian_hospilizations"),
+updated_covid_data <- select(mod_covid_data, Date, percent_change_white_Cases, percent_change_black_Cases, percent_change_latinx_Cases, percent_change_asian_Cases, 
+                             percent_change_white_Deaths, percent_change_black_Deaths, percent_change_latinx_Deaths, percent_change_asian_Deaths,
+                             percent_change_white_Hospilizations, percent_change_black_Hospilizations, percent_change_latinx_Hospilizations, percent_change_asian_Hospilizations) %>% 
+  pivot_longer(cols = c("percent_change_white_Cases", "percent_change_black_Cases", "percent_change_latinx_Cases", "percent_change_asian_Cases",
+                        "percent_change_white_Deaths", "percent_change_black_Deaths", "percent_change_latinx_Deaths", "percent_change_asian_Deaths",
+                        "percent_change_white_Hospilizations", "percent_change_black_Hospilizations", "percent_change_latinx_Hospilizations", 
+                        "percent_change_asian_Hospilizations"),
                names_to = "result_types", 
                values_to = "percent_change") 
 
@@ -206,9 +206,9 @@ server <- function(input, output) {
         filter(Date >= input$x_var[1], Date <= input$x_var[2])
       chart <- ggplot(dataset) +
         geom_line(aes(x = Date, y = percent_change, color = result_types)) +
-        labs(title = "Covid Racial Health Rate Impact", x = "Time (Date)", y = "Percent Change", 
+        labs(title = paste0("Covid ", input$result_type, " Rates For Different Races"), x = "Time (Date)", y = "Percent Change", 
              color = "Type of Informations")
       
       ggplotly(chart)
-    }) 
+    })
   }
