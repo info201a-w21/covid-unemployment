@@ -2,7 +2,7 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(tidyverse)
-source("app_server.R")
+#source("app_server.R")
 
 ui <- navbarPage(
   "Final Project",
@@ -112,11 +112,14 @@ page_five <- tabPanel(
       p("2. lorem ipsum"),
       p("3. lorem ipsum")
     ),
-    mainPanel()
+    mainPanel(
+      h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
+         img("",
+             src = "https://github.com/info201a-w21/covid-unemployment/blob/main/finalproject/minority_unemployment.jpeg")
+      )
+    )
   )
 )
-mainPanel(
-  img("unemployment", src = "~/Desktop/INFO 201/Group Project/project-covid-unemployment/finalproject/unemployment.jpg"))
 
 # Tammy's input widgets
 # select y variable (age groups)
