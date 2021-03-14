@@ -115,7 +115,9 @@ page_four <- tabPanel(
          while other quarters had a decrease in total employment, this allows the viewer to be able to see
          how darastic the increase or decrease was for the respective quarter(s). The dropdown menus are the 
          same for both charts in case the viewer wants to see how the total employment changed along with how 
-         much the total employment changed between quarter(s) and/or year(s). This dataset comes from",
+         much the total employment changed between quarter(s) and/or year(s). Some general patterns in the dataset 
+         are that in Quarter 2020-Q2, most countries have the biggest decrease in employment, that is, the greatest
+         unemployment for that quarter, which makes sense becase 2020-Q2 is when COVID hit. This data set comes from",
      a("Organisation for Economic Co-operation and Development"),
      herf= "https://data.oecd.org/emp/employment-rate.htm"),
  )
@@ -155,8 +157,6 @@ color_input <- selectInput(
   choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
 )
 
-#<<<<<<< HEAD
-#=======
 # Lynn's input widgets (employment)
 # For total working age population
 choose_country <- unique(employment_new$Country)
@@ -201,7 +201,7 @@ time_stamp <- checkboxGroupInput(
               "2020-Q3" = "2020-Q3",
               "2020-Q4" = "2020-Q4"),
   selected = "2019-Q1")
-#>>>>>>> d3b7cc495d8eb0e6f9cbfe29add8da88a145b7a9
+
 
 #Jonathan's input widgets (covid-related)
 result_type_input <- radioButtons( #check is this is right

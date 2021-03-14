@@ -150,9 +150,7 @@ server <- function(input, output) {
       }
     ggplotly(unemployment_chart)
   })
-#<<<<<<< HEAD
-  
-#=======
+
 # Lynn's visual interactive chart
     output$new_chart <- renderPlotly({
       output$new_text <- renderText({
@@ -214,4 +212,3 @@ server <- function(input, output) {
       ggplotly(chart)
     }) 
   }
-#>>>>>>> d3b7cc495d8eb0e6f9cbfe29add8da88a145b7a9
