@@ -2,7 +2,8 @@
 library(shiny)
 library(ggplot2)
 library(plotly)
-
+install.packages("ISOcodes")
+install.packages("readr")
 source("app_server.R")
 
 

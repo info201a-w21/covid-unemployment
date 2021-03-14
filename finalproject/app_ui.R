@@ -63,8 +63,26 @@ page_two <- tabPanel(
 )
 
 page_three <- tabPanel(
-  "Interactive Viz 2" # label for the tab in the navbar
+  "Interactive Viz 2",  # label for the tab in the navbar
+  titlePanel("Racial Covid-Related Health Rates"), 
+  sidebarLayout(
+    sidebarPanel(
+      result_type_input, 
+      time_input,
+    ),
+    mainPanel(
+      plotlyOutput(outputId = "line"), 
+      h2("About this chart"),
+      p("Although at times the rates are nearly the same, minorities still experinces higher rates of cases, hospilaizations, and deaths.
+        Just like with unemployment, the minority experinces a higher rates than white people, indicating the poor and unfair conditions
+        they experince in US. Althought they make up a small portion of the the country, they ultimately are suffering at higher rates,
+        whether through unemployemnt or covid-related health issues. This data helps expose how a lot minority groups live in bad environments
+        and are not always receiving the proper treatment, revealing the hidden inqeualities they live in the US.")
+    )
+  )
 )
+
+
 page_four <- tabPanel(
   "Employment Data",
   # Interactive chart
@@ -137,8 +155,8 @@ color_input <- selectInput(
   choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
 )
 
-<<<<<<< HEAD
-=======
+#<<<<<<< HEAD
+#=======
 # Lynn's input widgets (employment)
 # For total working age population
 choose_country <- unique(employment_new$Country)
@@ -183,4 +201,27 @@ time_stamp <- checkboxGroupInput(
               "2020-Q3" = "2020-Q3",
               "2020-Q4" = "2020-Q4"),
   selected = "2019-Q1")
->>>>>>> d3b7cc495d8eb0e6f9cbfe29add8da88a145b7a9
+#>>>>>>> d3b7cc495d8eb0e6f9cbfe29add8da88a145b7a9
+
+#Jonathan's input widgets (covid-related)
+result_type_input <- radioButtons( #check is this is right
+  inputId = "result_type", 
+  choices = c("cases", "hospilizations", "deaths"),  
+  selected = "cases",
+  label = "Choose what kind of data to graph",
+  choiceNames = NULL,
+  choiceValues = NULL
+)
+
+time_input <- sliderInput(
+  inputId = "x_var",
+  label = "Choose the year",
+  min = as.Date("2020-04-12","%Y-%m-%d"),
+  max = as.Date("2021-02-10","%Y-%m-%d"),
+  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
+  timeFormat= "%Y-%m-%d"
+)
+
+
+
+
