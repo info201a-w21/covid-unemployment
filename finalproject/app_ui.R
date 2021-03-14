@@ -158,7 +158,7 @@ page_five <- tabPanel(
     mainPanel(
       h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
          img("",
-             src = "https://github.com/info201a-w21/covid-unemployment/blob/main/finalproject/minority_unemployment.jpeg")
+             src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/minority_unemployment.jpeg")
       )
     )
   )
