@@ -9,8 +9,8 @@ source("app_server.R")
 
 result_type_input <- radioButtons( #check is this is right
   inputId = "result_type", 
-  choices = c("cases", "hospilizations", "deaths"),  
-  selected = "cases",
+  choices = c("Cases", "Hospilizations", "Deaths"),  
+  selected = "Cases",
   label = "Choose what kind of data to graph",
   choiceNames = NULL,
   choiceValues = NULL
