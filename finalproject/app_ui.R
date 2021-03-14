@@ -152,8 +152,8 @@ page_five <- tabPanel(
         first visualization where people of color were the most impacted."),
       p("3. We learned that decrease in employment in most countries occurred
         during Quarter 2 of 2020, which began around April, which correlates
-        with the rest of our insights which concluded that the biggest impact 
-        among COVID cases and unemployment began around April.")
+        with the rest of our insights which concluded that the biggest impact of 
+        COVID cases and unemployment on minorities began around April.")
     ),
     mainPanel(
       h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
