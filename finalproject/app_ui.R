@@ -2,7 +2,6 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(tidyverse)
-#source("app_server.R")
 
 ui <- navbarPage(
   "Final Project",
@@ -90,8 +89,7 @@ page_three <- tabPanel(
 
 
 page_four <- tabPanel(
-  "Employment Data",
-  # Interactive chart
+  "Interactive Viz 3", # label for the tab in the navbar
   employment_total <- tabPanel(
     "Total working population employment data",
     titlePanel("Chart that shows total the percentage of total working age (15-64) population"),
