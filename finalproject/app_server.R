@@ -9,7 +9,6 @@ library(tidyverse)
 unemploy <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemploy_by_race_bureau.csv", header = T)
 
 # Renaming columns, preparing for chart
-unemploy <- rename(unemploy, race = ï..race)
 unemploy$year <- sapply(unemploy$year, toString)
 
 # Lynn's interactive stuff, chart setup and manipulation
