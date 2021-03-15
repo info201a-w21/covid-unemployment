@@ -31,34 +31,33 @@ pandemic.
 1. Which race/groups of people are most unemployed during the pandemic?
 2. Which month(s) have the highest death rates?
 3. When was unemployment at its highest during the pandemic?
+4. Which race/groups of people are most impacted health-wise during the pandemic?
 
 
 
-# **DATA 1:** Google Search Trends
+# **DATA 1:** Covid Racial Data
 
 **Where did you download the data (e.g., a web URL)?**
 
-- We downloaded the data from the google trend database
+- We downloaded the data from the monitored platform called The COVID Tracking Project
 
-- URL: https://trends.google.com/trends/explore?q=%2Fg%2F11j2cc_qll,%2Fm%2F01cpyy,%2Fg%2F11b77d6b6f,%2Fm%2F0g9pc,%2Fg%2F11b77d3kyh
+- URL: https://covidtracking.com/race
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-Data was collected through Google tracking and updating the most popular topics searched on its platform.
+Data was collected through The COVID Tracking Project and was constatly updated. The data tracked the the amount of deaths, hospitalizations, and covid-cases amoung different racial groups.
 
 **How many observations (rows) are in your data?**
 
-53
+4929
 
 **How many features (columns) are in the data?**
 
-21
+56
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-1. What headlines do people generally gravitate towards?
-
-2. How have topics changed throughout the year
+1. Which race/groups of people are most impacted health-wise during the pandemic?
 
 
 # **DATA 2:** Unemployment by Race
