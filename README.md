@@ -29,11 +29,10 @@ pandemic.
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
 1. Which race/groups of people are most unemployed during the pandemic?
-2. When was unemployment at its highest during the pandemic?
-3. Which quarter experienced the greatest decrease in the total working age population (15-64)?
+2. Which month(s) have the highest death rates?
+3. When was unemployment at its highest during the pandemic?
 
 
-[ REVISE BELOW!!! ]
 
 # **DATA 1:** Google Search Trends
 
