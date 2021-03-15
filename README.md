@@ -29,60 +29,58 @@ pandemic.
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
 1. Which race/groups of people are most unemployed during the pandemic?
-2. When was unemployment at its highest during the pandemic?
-3. Which quarter experienced the greatest decrease in the total working age population (15-64)?
+2. Which month(s) have the highest death rates?
+3. When was unemployment at its highest during the pandemic?
+4. Which race/groups of people are most impacted health-wise during the pandemic?
 
 
-[ REVISE BELOW!!! ]
 
-# **DATA 1:** Google Search Trends
+# **DATA 1:** Covid Racial Data
 
 **Where did you download the data (e.g., a web URL)?**
 
-- We downloaded the data from the google trend database
+- We downloaded the data from the monitored platform called The COVID Tracking Project
 
-- URL: https://trends.google.com/trends/explore?q=%2Fg%2F11j2cc_qll,%2Fm%2F01cpyy,%2Fg%2F11b77d6b6f,%2Fm%2F0g9pc,%2Fg%2F11b77d3kyh
+- URL: https://covidtracking.com/race
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-Data was collected through Google tracking and updating the most popular topics searched on its platform.
+Data was collected through The COVID Tracking Project and was constatly updated. The data tracked the the amount of deaths, hospitalizations, and covid-cases amoung different racial groups.
 
 **How many observations (rows) are in your data?**
 
-53
+4929
 
 **How many features (columns) are in the data?**
 
-21
+56
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-1. What headlines do people generally gravitate towards?
-
-2. How have topics changed throughout the year
+1. Which race/groups of people are most impacted health-wise during the pandemic?
 
 
-# **DATA 2:** New York Times Top Stories/Articles
+# **DATA 2:** Unemployment by Race
 
 **Where did you download the data (e.g., a web URL)?**
-https://developer.nytimes.com/docs/top-stories-product/1/overview
+https://www.bls.gov/web/empsit/cpsee_e16.htm
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-NY times collecting the top stories/articles on their website updated each day.
+Population survey by U.S. Bureau of Labor Statistics
 
 **How many observations (rows) are in your data?**
 
-26
+14
 
 **How many features (columns) are in the data?**
 
-24
+10
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-1. What headlines do people generally gravitate towards?
-2. What are the most common topics covered in news today?
+1. What race groups have the highest unemployment rates?
+2. What age groups within each race has highest unemployment rates/how do they compare to other races?
 
 
 # **DATA 3:** Employment Rate
