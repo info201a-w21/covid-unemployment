@@ -89,7 +89,7 @@ page_three <- tabPanel(
 
 
 page_four <- tabPanel(
-  "Interactive Viz 3", # label for the tab in the navbar
+  "Employment Data", # label for the tab in the navbar
   employment_total <- tabPanel(
     "Total working population employment data",
     titlePanel("Chart that shows total the percentage of total working age (15-64) population"),
@@ -135,7 +135,7 @@ page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
   sidebarLayout(
     sidebarPanel(
-      h2("3 major takeaways"),
+      h1("3 major takeaways"),
       p("1. According to the insights gathered from the visualizations, Blacks 
       and Latinx continue to have the highest unemployment rates from ages 18
       and up until ages 45-54, where it was about even with Asians. Then Blacks
