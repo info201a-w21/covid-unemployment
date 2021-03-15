@@ -18,6 +18,8 @@ page_one <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       tags$div(class = "header", "Hello!"),
+      #tags$div(class = "header", "Hello!"),
+      #<font size="3"> This is my text number 3</font> 
     tags$p("For this project, we wanted to explore unemployment during the Covid 19
         pandemic because we want to find out how the pandemic has contributed 
         to unemployment and if there are certain groups of people who are more 
@@ -136,17 +138,9 @@ page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
   sidebarLayout(
     sidebarPanel(
-<<<<<<< HEAD
       tags$div(class = "header", "Yay! You made it to the last page!"),
-=======
-<<<<<<< HEAD
       h1("3 major takeaways"),
-      p("1. According to the insights gathered from the visualizations, Blacks 
-=======
->>>>>>> 20aa1f0fe709b45a82b939e87fe1d1f8af2618d6
-      h2("3 major takeaways"),
       tags$p("1. According to the insights gathered from the visualizations, Blacks 
->>>>>>> cbc2f091e4dc3a6c0e34a414f79f8fab6c7c747c
       and Latinx continue to have the highest unemployment rates from ages 18
       and up until ages 45-54, where it was about even with Asians. Then Blacks
       continued to take the lead in the highest unemployment rate for ages 65 
