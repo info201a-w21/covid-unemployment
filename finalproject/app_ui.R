@@ -34,14 +34,14 @@ page_one <- tabPanel(
     mainPanel(
       h1("COVID and Unemployment",
       img("",
-      src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemployment.jpg", width = "800", height = "550")
+      src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemployment.jpg", width = "900", height = "600")
       )
     )
   )
 )
 
 page_two <- tabPanel(
-  "Interactive Viz 1", # label for the tab in the navbar
+  "Unemployment by Race", # label for the tab in the navbar
   titlePanel("Unemployment by Race during Covid"),
     sidebarLayout(
        sidebarPanel(
@@ -62,7 +62,7 @@ page_two <- tabPanel(
 )
 
 page_three <- tabPanel(
-  "Interactive Viz 2",  # label for the tab in the navbar
+  "COVID Among Races",  # label for the tab in the navbar
   titlePanel("Racial Covid-Related Health Rates"), 
   sidebarLayout(
     sidebarPanel(
@@ -156,7 +156,7 @@ page_five <- tabPanel(
     mainPanel(
       h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
          img("",
-             src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/minority_unemployment.jpeg")
+             src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/minority_unemployment.jpeg", width = "900", height = "600")
       )
     )
   )
