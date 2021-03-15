@@ -17,8 +17,8 @@ page_one <- tabPanel(
   titlePanel("Welcome!"), # show with a displayed title
   sidebarLayout(
     sidebarPanel(
-      tags$div(class = "header", "Hello!"),
-      <font size="3"> This is my text number 3</font> 
+      #tags$div(class = "header", "Hello!"),
+      #<font size="3"> This is my text number 3</font> 
     tags$p("For this project, we wanted to explore unemployment during the Covid 19
         pandemic because we want to find out how the pandemic has contributed 
         to unemployment and if there are certain groups of people who are more 
