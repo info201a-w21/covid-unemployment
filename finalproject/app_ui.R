@@ -18,7 +18,6 @@ page_one <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       tags$div(class = "header", "Hello!"),
-      <font size="3"> This is my text number 3</font> 
     tags$p("For this project, we wanted to explore unemployment during the Covid 19
         pandemic because we want to find out how the pandemic has contributed 
         to unemployment and if there are certain groups of people who are more 
@@ -137,6 +136,7 @@ page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
   sidebarLayout(
     sidebarPanel(
+      tags$div(class = "header", "Yay! You made it to the last page!"),
       h2("3 major takeaways"),
       tags$p("1. According to the insights gathered from the visualizations, Blacks 
       and Latinx continue to have the highest unemployment rates from ages 18
