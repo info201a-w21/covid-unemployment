@@ -17,19 +17,21 @@ page_one <- tabPanel(
   titlePanel("Welcome!"), # show with a displayed title
   sidebarLayout(
     sidebarPanel(
-      p("For this project, we wanted to explore unemployment during the Covid 19
+      tags$div(class = "header", "Hello!"),
+      <font size="3"> This is my text number 3</font> 
+    tags$p("For this project, we wanted to explore unemployment during the Covid 19
         pandemic because we want to find out how the pandemic has contributed 
         to unemployment and if there are certain groups of people who are more 
         affected than others during the pandemic."),
     h3("Questions we you hope to answer:"),
-    p("1. Which race/groups of people are most unemployed during the pandemic?"),
-    p("2. Which month(s) have the highest death rates?"),
-    p("3. When was unemployment at its highest during the pandemic?"),
+    tags$p("1. Which race/groups of people are most unemployed during the pandemic?"),
+    tags$p("2. Which month(s) have the highest death rates?"),
+    tags$p("3. When was unemployment at its highest during the pandemic?"),
     h3("Data we are using to answer these questions:"),
-    p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
-    p("Employment rate: https://data.oecd.org/emp/employment-rate.htm"),
-    p("COVID racial data tracker: https://covidtracking.com/race"),
-    p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
+    tags$p("COVID 19 unemployment: https://cew.georgetown.edu/cew-reports/jobtracker/"),
+    tags$p("Employment rate: https://data.oecd.org/emp/employment-rate.htm"),
+    tags$p("COVID racial data tracker: https://covidtracking.com/race"),
+    tags$p("Unemployment insurance: https://oui.doleta.gov/unemploy/claims.asp")
     ),
     mainPanel(
       h1("COVID and Unemployment",
@@ -89,7 +91,7 @@ page_three <- tabPanel(
 
 
 page_four <- tabPanel(
-  "Interactive Viz 3", # label for the tab in the navbar
+  "Employment Data", # label for the tab in the navbar
   employment_total <- tabPanel(
     "Total working population employment data",
     titlePanel("Chart that shows total the percentage of total working age (15-64) population"),
@@ -136,19 +138,19 @@ page_five <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("3 major takeaways"),
-      p("1. According to the insights gathered from the visualizations, Blacks 
+      tags$p("1. According to the insights gathered from the visualizations, Blacks 
       and Latinx continue to have the highest unemployment rates from ages 18
       and up until ages 45-54, where it was about even with Asians. Then Blacks
       continued to take the lead in the highest unemployment rate for ages 65 
       and up. This wasn't too shocking, given that people of color in this 
         country often suffer the most."),
-      p("2. We learned that the highest covid cases in US was from April to May, 
+      tags$p("2. We learned that the highest covid cases in US was from April to May, 
       and it was highest among people who were Asian. The highest hospitalizations 
       was in November, with Asians, Latinx, and Blacks taking the lead. The 
       highest deaths occurred in April among the Latinx population. These 
         findings weren't surprising and it matches with our findings from the 
         first visualization where people of color were the most impacted."),
-      p("3. We learned that decrease in employment in most countries occurred
+      tags$p("3. We learned that decrease in employment in most countries occurred
         during Quarter 2 of 2020, which began around April, which correlates
         with the rest of our insights which concluded that the biggest impact of 
         COVID cases and unemployment on minorities began around April.")
@@ -245,7 +247,6 @@ time_input <- sliderInput(
   value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
   timeFormat= "%Y-%m-%d"
 )
-
 
 
 
