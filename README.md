@@ -21,8 +21,8 @@ pandemic.
     + https://covidtracking.com/race
 
 
-* COVID tracking project dataset:
-    + https://covidtracking.com/data  
+* Employment Rate
+    + https://data.oecd.org/emp/employment-rate.htm
 
 
 
@@ -30,8 +30,7 @@ pandemic.
 
 1. Which race/groups of people are most unemployed during the pandemic?
 2. When was unemployment at its highest during the pandemic?
-3. Which month(s) have the highest death rates?
-
+3. Which quarter experienced the greatest decrease in the total working age population (15-64)?
 
 
 [ REVISE BELOW!!! ]
@@ -86,24 +85,25 @@ NY times collecting the top stories/articles on their website updated each day.
 2. What are the most common topics covered in news today?
 
 
-# **DATA 3:** YouTube Trends Search
+# **DATA 3:** Employment Rate
 **Where did you download the data (e.g., a web URL)?**
-https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
+https://data.oecd.org/emp/employment-rate.htm
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-The data collected and generated is about the YouTube trends in the US that is updated daily. The data is collected by Rishav Sharma through Kaggle.
+The data was collected by the Organization for Economic Co-operation and Development. The dataset
+is about the changes in employment rate for specific countries at the working age population of 15 to 64 year old employees.
 
 **How many observations (rows) are in your data?**
 
-There are 33196 rows in this data
+There are 371 rows in this data
 
 **How many features (columns) are in the data?**
 
-There are 16 columns in the data
+There are 8 columns in the data
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-1. Which trending video of the day in the US got the most dislikes?
-2. Which trending video of the day in the US got the most likes?
-3. Is there a correlation between how many views a video gets and its trending rank in the US?
+1. Which country has the greatest working age population (15-64)?
+2. Which country has the greatest decrease in working age population (15-64)?
+3. Which country experienced the greatest fluctuation in employment between 2019-Q1 and 2020-Q4??
