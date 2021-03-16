@@ -6,14 +6,14 @@ library(tidyverse)
 
 # Tammy's interactive stuff, chart set up:
 # unemployment graph by race, total (both female and male)
-unemploy <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemploy_by_race_bureau.csv", header = T)
+unemploy <- read.csv('unemploy_by_race_bureau.csv', header = T)
 
 # Renaming columns, preparing for chart
 unemploy$year <- sapply(unemploy$year, toString)
 
 # Lynn's interactive stuff, chart setup and manipulation
 # Load in OECD data
-employment_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/OECD_newdf.csv")
+employment_data <- read.csv('OECD_newdf.csv')
 
 # Rename column and restructure data frame
 names(employment_data)[names(employment_data) == "LOCATION"] <- "Alpha_3"
@@ -31,7 +31,7 @@ employment_new <- employment_merge %>%
   filter(Quarter >= 2019)
 
 #Jonathan's chart data
-covid_data <- read.csv("https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/covid_race.csv")
+covid_data <- read.csv('covid_race.csv')
 
 mod_covid_data <- covid_data %>% 
   group_by(Date) %>% 
@@ -183,7 +183,7 @@ server <- function(input, output) {
         arrange(desc(Quarter))%>%
         filter(Country %in% input$countryName)%>%
         filter(Quarter %in% input$Timeline)
-      #need to make a legend 
+      
       bar_chart<- ggplot(data = employment_total, x = Quarter, y = change_in_value,
                          fill = change_in_value)+
         geom_point(aes(x = Quarter, y = change_in_value), 
