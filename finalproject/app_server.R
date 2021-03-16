@@ -4,6 +4,7 @@ library(tidyverse)
 library(plotly)
 library(tidyverse)
 
+
 # Tammy's interactive stuff, chart set up:
 # unemployment graph by race, total (both female and male)
 unemploy <- read.csv('unemploy_by_race_bureau.csv', header = T)
