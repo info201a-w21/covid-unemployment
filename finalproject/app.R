@@ -7,8 +7,6 @@ library(tidyverse)
 library(plotly)
 library(ISOcodes)
 library(readr)
-library(htmltools)
-library(rsconnect)
 
 # Source in `app_ui.R` and `app_server.R`
 source("app_ui.R")

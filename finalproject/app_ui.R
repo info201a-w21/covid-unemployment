@@ -4,15 +4,6 @@ library(plotly)
 library(tidyverse)
 source("app_server.R")
 
-ui <- navbarPage(
-  "Final Project",
-  page_one,
-  page_two,
-  page_three,
-  page_four,
-  page_five
-)
-
 page_one <- tabPanel(
   "Introduction", # label for the tab in the navbar
   titlePanel("Welcome!"), # show with a displayed title
@@ -40,6 +31,25 @@ page_one <- tabPanel(
       )
     )
   )
+)
+
+# Tammy's input widgets
+# select y variable (age groups)
+age_input <- selectInput(
+  inputId = "y_var",
+  label = "Choose an age group",
+  choices = c("total_16_over", "ages_16_to_19",  
+              "ages_18_to_19", "ages_20_over", "ages_20_to_24", 
+              "ages_25_and_over", "ages_25_to_54", 
+              "ages_35_to_44", "ages_45_to_54", "ages_55_and_over",
+              "ages_55_to_64", "ages_65_and_over")
+)
+
+# select color of unemployment chart
+color_input <- selectInput(
+  inputId = "color",
+  label = "Choose a color palette",
+  choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
 )
 
 page_two <- tabPanel(
@@ -88,7 +98,49 @@ page_three <- tabPanel(
     )
   )
 )
+# Lynn's input widgets (employment)
+# For total working age population
+choose_country <- unique(employment_new$Country)
 
+input_country <- selectInput(
+  inputId = "name_of_country",
+  label = "Choose a country",
+  choices = c(choose_country),
+  selected = "Australia")
+
+stamp_time <- checkboxGroupInput(
+  inputId = "pick_a_quarter",
+  label = "Choose a Quarter",
+  choices = c("2019-Q1" = "2019-Q1",
+              "2019-Q2" = "2019-Q2",
+              "2019-Q3" = "2019-Q3",
+              "2019-Q4" = "2019-Q4",
+              "2020-Q1" = "2020-Q1",
+              "2020-Q2" = "2020-Q2",
+              "2020-Q3" = "2020-Q3",
+              "2020-Q4" = "2020-Q4"),
+  selected = "2019-Q1")
+# For change in total working age population 
+choose_country <- unique(employment_new$Country)
+
+country_input <- selectInput(
+  inputId = "countryName",
+  label = "Choose a country",
+  choices = c(choose_country),
+  selected = "Australia")
+
+time_stamp <- checkboxGroupInput(
+  inputId = "Timeline",
+  label = "Choose a Quarter",
+  choices = c("2019-Q1" = "2019-Q1",
+              "2019-Q2" = "2019-Q2",
+              "2019-Q3" = "2019-Q3",
+              "2019-Q4" = "2019-Q4",
+              "2020-Q1" = "2020-Q1",
+              "2020-Q2" = "2020-Q2",
+              "2020-Q3" = "2020-Q3",
+              "2020-Q4" = "2020-Q4"),
+  selected = "2019-Q1")
 
 page_four <- tabPanel(
   "Employment Data", # label for the tab in the navbar
@@ -133,6 +185,25 @@ page_four <- tabPanel(
  )
 )
 
+#Jonathan's input widgets (covid-related)
+result_type_input <- radioButtons( #check is this is right
+  inputId = "result_type", 
+  choices = c("Cases", "Hospilizations", "Deaths"),  
+  selected = "Cases",
+  label = "Choose what kind of data to graph",
+  choiceNames = NULL,
+  choiceValues = NULL
+)
+
+time_input <- sliderInput(
+  inputId = "x_var",
+  label = "Choose the year",
+  min = as.Date("2020-04-12","%Y-%m-%d"),
+  max = as.Date("2021-02-10","%Y-%m-%d"),
+  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
+  timeFormat= "%Y-%m-%d"
+)
+
 page_five <- tabPanel(
   "Summary", # label for the tab in the navbar
   sidebarLayout(
@@ -165,89 +236,12 @@ page_five <- tabPanel(
   )
 )
 
-# Tammy's input widgets
-# select y variable (age groups)
-age_input <- selectInput(
-  inputId = "y_var",
-  label = "Choose an age group",
-  choices = c("total_16_over", "ages_16_to_19",  
-              "ages_18_to_19", "ages_20_over", "ages_20_to_24", 
-              "ages_25_and_over", "ages_25_to_54", 
-              "ages_35_to_44", "ages_45_to_54", "ages_55_and_over",
-              "ages_55_to_64", "ages_65_and_over")
+ui <- navbarPage(
+  "Final Project",
+  page_one,
+  page_two,
+  page_three,
+  page_four,
+  page_five
 )
-
-# select color of unemployment chart
-color_input <- selectInput(
-  inputId = "color",
-  label = "Choose a color palette",
-  choices = c("Reds", "Oranges", "Greens", "Blues", "Purples", "Greys")
-)
-
-# Lynn's input widgets (employment)
-# For total working age population
-choose_country <- unique(employment_new$Country)
-
-input_country <- selectInput(
-  inputId = "name_of_country",
-  label = "Choose a country",
-  choices = c(choose_country),
-  selected = "Australia")
-
-stamp_time <- checkboxGroupInput(
-  inputId = "pick_a_quarter",
-  label = "Choose a Quarter",
-  choices = c("2019-Q1" = "2019-Q1",
-              "2019-Q2" = "2019-Q2",
-              "2019-Q3" = "2019-Q3",
-              "2019-Q4" = "2019-Q4",
-              "2020-Q1" = "2020-Q1",
-              "2020-Q2" = "2020-Q2",
-              "2020-Q3" = "2020-Q3",
-              "2020-Q4" = "2020-Q4"),
-  selected = "2019-Q1")
-
-# For change in total working age population 
-choose_country <- unique(employment_new$Country)
-
-country_input <- selectInput(
-  inputId = "countryName",
-  label = "Choose a country",
-  choices = c(choose_country),
-  selected = "Australia")
-
-time_stamp <- checkboxGroupInput(
-  inputId = "Timeline",
-  label = "Choose a Quarter",
-  choices = c("2019-Q1" = "2019-Q1",
-              "2019-Q2" = "2019-Q2",
-              "2019-Q3" = "2019-Q3",
-              "2019-Q4" = "2019-Q4",
-              "2020-Q1" = "2020-Q1",
-              "2020-Q2" = "2020-Q2",
-              "2020-Q3" = "2020-Q3",
-              "2020-Q4" = "2020-Q4"),
-  selected = "2019-Q1")
-
-
-#Jonathan's input widgets (covid-related)
-result_type_input <- radioButtons( #check is this is right
-  inputId = "result_type", 
-  choices = c("Cases", "Hospilizations", "Deaths"),  
-  selected = "Cases",
-  label = "Choose what kind of data to graph",
-  choiceNames = NULL,
-  choiceValues = NULL
-)
-
-time_input <- sliderInput(
-  inputId = "x_var",
-  label = "Choose the year",
-  min = as.Date("2020-04-12","%Y-%m-%d"),
-  max = as.Date("2021-02-10","%Y-%m-%d"),
-  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
-  timeFormat= "%Y-%m-%d"
-)
-
-
 
