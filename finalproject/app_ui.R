@@ -36,7 +36,7 @@ page_one <- tabPanel(
     mainPanel(
       h1("COVID and Unemployment",
       img("",
-      src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/www/unemployment.jpg", width = "900", height = "600")
+      src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/unemployment.jpg", width = "900", height = "600")
       )
     )
   )
@@ -159,7 +159,7 @@ page_five <- tabPanel(
     mainPanel(
       h1("Unemployment During the Pandemic Affects Minorities Disproportionately",
          img("",
-             src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/www/minority_unemployment.jpeg", width = "900", height = "600")
+             src = "https://raw.githubusercontent.com/info201a-w21/covid-unemployment/main/finalproject/minority_unemployment.jpeg", width = "900", height = "600")
       )
     )
   )
