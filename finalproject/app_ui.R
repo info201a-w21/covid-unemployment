@@ -73,6 +73,25 @@ page_two <- tabPanel(
   )
 )
 
+#Jonathan's input widgets (covid-related)
+result_type_input <- radioButtons( #check is this is right
+  inputId = "result_type", 
+  choices = c("Cases", "Hospilizations", "Deaths"),  
+  selected = "Cases",
+  label = "Choose what kind of data to graph",
+  choiceNames = NULL,
+  choiceValues = NULL
+)
+
+time_input <- sliderInput(
+  inputId = "x_var",
+  label = "Choose the year",
+  min = as.Date("2020-04-12","%Y-%m-%d"),
+  max = as.Date("2021-02-10","%Y-%m-%d"),
+  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
+  timeFormat= "%Y-%m-%d"
+)
+
 page_three <- tabPanel(
   "COVID Among Races",  # label for the tab in the navbar
   titlePanel("Racial Covid-Related Health Rates"), 
@@ -183,25 +202,6 @@ page_four <- tabPanel(
      a("Organisation for Economic Co-operation and Development"),
      herf= "https://data.oecd.org/emp/employment-rate.htm"),
  )
-)
-
-#Jonathan's input widgets (covid-related)
-result_type_input <- radioButtons( #check is this is right
-  inputId = "result_type", 
-  choices = c("Cases", "Hospilizations", "Deaths"),  
-  selected = "Cases",
-  label = "Choose what kind of data to graph",
-  choiceNames = NULL,
-  choiceValues = NULL
-)
-
-time_input <- sliderInput(
-  inputId = "x_var",
-  label = "Choose the year",
-  min = as.Date("2020-04-12","%Y-%m-%d"),
-  max = as.Date("2021-02-10","%Y-%m-%d"),
-  value = c(as.Date("2020-04-12"), as.Date("2021-02-10")),
-  timeFormat= "%Y-%m-%d"
 )
 
 page_five <- tabPanel(

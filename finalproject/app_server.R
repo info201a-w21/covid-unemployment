@@ -203,7 +203,6 @@ server <- function(input, output) {
     output$line <- renderPlotly({
       dataset <- updated_covid_data %>% 
         filter(str_detect(result_types,input$result_type)) %>% 
-        #filter(str_detect(result_types, input$race)) %>% 
         filter(Date >= input$x_var[1], Date <= input$x_var[2])
       chart <- ggplot(dataset) +
         geom_line(aes(x = Date, y = percent_change, color = result_types)) +
