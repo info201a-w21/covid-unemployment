@@ -198,9 +198,8 @@ page_four <- tabPanel(
    quarter(s) and/or year(s). Some general patterns in the dataset are that in 
    Quarter 2020-Q2, most countries have the biggest decrease in employment, 
    that is, the greatest unemployment for that quarter, which makes sense 
-     because 2020-Q2 is when COVID hit. This data set comes from",
-     a("Organisation for Economic Co-operation and Development"),
-     herf= "https://data.oecd.org/emp/employment-rate.htm"),
+     because 2020-Q2 is when COVID hit. This data set comes from
+     Organisation for Economic Co-operation and Development"),
  )
 )
 
